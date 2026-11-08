@@ -37,3 +37,28 @@
 @media(max-width:560px){.brand-hand{width:27px;height:33px}.brand{gap:2px}.brand strong{font-size:15px}.page-nav{gap:12px}.topbar{gap:8px}}
 .topbar{position:sticky;top:0;z-index:20}.sidebar{top:58px}.actuator-logo{display:block;position:relative;width:48px;height:44px;flex-shrink:0}.actuator-logo img,.actuator-logo canvas{display:block;position:absolute;inset:0;width:100%;height:100%}.actuator-logo[data-renderer=webgl] img{visibility:hidden}
 @media(max-width:560px){.actuator-logo{width:30px;height:34px}}
+
+/* Compact mobile discovery; the same filter controls live in a modal sheet. */
+#filter-selects{display:flex;flex-direction:column;gap:8px}.filter-field-label,.mobile-filter-button{display:none}
+.filter-dialog{width:100%;max-width:560px;max-height:calc(100dvh - 68px);margin:auto auto 0;border-radius:16px 16px 0 0;border-bottom:0;overflow:hidden}
+.filter-sheet{display:flex;flex-direction:column;max-height:calc(100dvh - 70px)}
+.filter-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);flex-shrink:0}
+.filter-header h2{font:500 23px 'PP Neue Machina',sans-serif;margin:0;letter-spacing:-.6px}.filter-header button{display:grid;place-items:center;width:44px;height:44px;border-radius:4px}
+.filter-sheet-body{overflow-y:auto;overscroll-behavior:contain;padding:20px;min-height:0}
+.filter-dialog #filter-selects{gap:18px}.filter-dialog .type-select{display:flex;flex-direction:column;gap:8px;height:auto}.filter-dialog .filter-field-label{display:block;font:10px var(--mono);color:var(--secondary)}
+.filter-dialog select{min-height:46px;font-size:16px;padding:10px;background:var(--soft)}
+.filter-dialog .topic-row{margin:24px 0 0;padding:20px 0 0}.filter-dialog .topic-label{display:block;font-size:10px;margin-bottom:14px}
+.filter-dialog .topics{display:flex;flex-direction:row;flex-wrap:wrap;overflow:visible;gap:8px;padding:0}.filter-dialog .topic{width:auto;min-height:42px;flex-shrink:1;font-size:11px;padding:10px 12px;gap:10px;border:1px solid var(--line);background:var(--soft)}
+.filter-dialog .topic.active{background:var(--selected);border-color:var(--secondary)}.filter-dialog .topic.active:before{display:none}.filter-dialog .topic span{font-size:9px}
+.filter-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px max(14px,env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--surface);flex-shrink:0}
+.filter-footer button{min-height:44px;font-size:12px}.filter-footer>button:first-child{padding:8px 0;color:var(--secondary)}.filter-footer .primary-button{padding:12px 20px}
+@media(max-width:800px){
+  .sidebar{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;padding:14px 16px 10px;overflow:visible}
+  .searchbar{display:block}.search-input{height:46px}.search-input input{font-size:16px;letter-spacing:-.4px}.search-input kbd{display:none}.search-input button{min-width:32px;min-height:40px;align-items:center;justify-content:center}
+  #filter-selects-home,#filter-topics-home{display:none}
+  .edition-select{grid-column:auto;min-width:0;margin:0;padding:0;position:relative}.edition-select .mono{display:none}.edition-select select{width:100%;height:44px;font-size:16px;padding:9px 12px;background:var(--soft);border-radius:4px}
+  .mobile-filter-button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid var(--line);border-radius:4px;font-size:12px}.mobile-filter-button svg{width:16px;height:16px}.mobile-filter-button.has-filters{background:var(--selected)}
+  #filter-count{display:grid;place-items:center;min-width:20px;height:20px;border-radius:4px;background:var(--accent);color:var(--on-accent);font:10px var(--mono)}
+  .library-controls{grid-column:1/-1;display:flex;align-items:center;gap:4px;min-width:0;flex-wrap:wrap}.library-controls .collection{width:auto;min-height:44px;gap:10px;padding:10px;font-size:10px}.library-controls .collection .mono{font-size:9px}.library-controls .share-list{margin:0 0 0 auto;min-height:44px;min-width:44px;justify-content:center;padding:10px}.library-controls .share-list span{display:none}.library-controls .share-list svg{width:16px;height:16px}
+  .results-count{white-space:normal;line-height:1.5}
+}

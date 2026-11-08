@@ -71,6 +71,47 @@ test('mobile layout fits the viewport and stack keeps titles and summaries acces
   await page.screenshot({path:'/tmp/corl-mobile.png',fullPage:false});
 });
 
+test('mobile filters stay compact, update results, and survive desktop resizing',async({page})=>{
+  await page.setViewportSize({width:390,height:844});
+  await expect(page.getByLabel('Robot task',{exact:true})).not.toBeVisible();
+  expect((await page.locator('.paper-card').first().boundingBox()).y).toBeLessThan(330);
+  await page.getByLabel('Conference year',{exact:true}).selectOption('2023');
+  await page.locator('#open-filters').click();
+  await expect(page.getByRole('dialog',{name:'Find your papers.'})).toBeVisible();
+  await page.getByLabel('Presentation type',{exact:true}).selectOption('Oral');
+  await expect(page.locator('#show-filter-results')).toContainText('Show 33 papers');
+  await page.screenshot({path:'/tmp/corl-mobile-filters.png'});
+  await page.locator('#show-filter-results').click();
+  await expect(page.locator('#open-filters')).toBeFocused();
+  await expect(page.locator('#filter-count')).toHaveText('1');
+  await expect(page.locator('#results-count')).toContainText('33 PAPERS');
+  await page.screenshot({path:'/tmp/corl-mobile-grid.png'});
+  await page.reload();
+  await expect(page.locator('#filter-count')).toHaveText('1');
+  await page.locator('#open-filters').click();
+  await page.locator('#clear-mobile-filters').click();
+  await expect(page.locator('#show-filter-results')).toContainText('Show 199 papers');
+  await expect(page.getByLabel('Conference year',{exact:true})).toHaveValue('2023');
+  await page.locator('[data-topic="manipulation"]').click();
+  await expect(page.locator('[data-topic="manipulation"]')).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#mobile-filters')).not.toBeVisible();
+  await page.locator('#open-filters').click();
+  await page.setViewportSize({width:1440,height:1000});
+  await expect(page.locator('#mobile-filters')).not.toBeVisible();
+  await expect(page.getByLabel('Robot task',{exact:true})).toBeVisible();
+  await expect(page.locator('.sidebar [data-topic="manipulation"]')).toHaveAttribute('aria-pressed','true');
+  await expect(page.locator('body')).not.toHaveClass('modal-open');
+  await page.setViewportSize({width:320,height:568});
+  await page.locator('#open-filters').click();
+  await page.emulateMedia({colorScheme:'dark'});
+  await expect(page.locator('#show-filter-results')).toBeInViewport();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+  await page.locator('[data-topic="other"]').scrollIntoViewIfNeeded();
+  await expect(page.locator('[data-topic="other"]')).toBeInViewport();
+  await page.screenshot({path:'/tmp/corl-mobile-filters-small-dark.png'});
+});
+
 test('shared lists span years, preserve recipient bookmarks, and export a portable file',async({page,browser})=>{
   await page.getByRole('textbox',{name:'Search papers'}).fill('Being-H0.5');
   await page.locator('[data-save]').click();

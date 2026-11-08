@@ -5,6 +5,7 @@ import { topics, tasks, tagPaper, filterPapers, shortSummary } from './catalog.j
 
 const icons = {
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  filters: '<path d="M3 6h18M3 12h18M3 18h18"/><circle cx="8" cy="6" r="2" fill="var(--surface)"/><circle cx="16" cy="12" r="2" fill="var(--surface)"/><circle cx="10" cy="18" r="2" fill="var(--surface)"/>',
   search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
   grid: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>',
   stack: '<rect x="3" y="3" width="18" height="7"/><rect x="3" y="14" width="18" height="7"/>',
@@ -32,25 +33,36 @@ document.querySelector('#app').innerHTML = `
   <header class="topbar"><a class="brand" href="/" aria-label="CoRL Explorer home"><span class="actuator-logo" aria-hidden="true"><img src="/brand/actuator.svg" alt="" width="48" height="44"/></span><strong>CoRL<span>Explorer</span></strong></a><div class="top-caption mono">2017—2026 · CONFERENCE ON ROBOT LEARNING</div><nav class="page-nav" aria-label="Main navigation"><a href="/" aria-current="page">Papers</a><a href="/trends.html">Trends</a></nav><button id="theme-toggle" class="theme-toggle" aria-label="Dark mode" aria-pressed="false">${icon('moon')}<span>Dark mode</span></button></header>
   <div class="shell"><aside class="sidebar">
     <div class="searchbar"><div class="search-input">${icon('search')}<input id="search" aria-label="Search papers" placeholder="Search papers, authors, or an idea…" value="${esc(state.query)}" autocomplete="off"/><button id="clear-search" aria-label="Clear search">${icon('close')}</button><kbd>/</kbd></div>
-    <label class="type-select"><select id="task" aria-label="Robot task"><option value="">All tasks</option>${tasks.map(t=>`<option value="${t.id}">${t.name}</option>`).join('')}</select></label>
-    <label class="type-select"><select id="presentation" aria-label="Presentation type"><option value="">All presentations</option><option>Oral</option><option>Spotlight</option><option>Poster</option><option>Interactive</option><option>Blue Sky</option><option>Talk</option><option value="Accepted">Accepted · type unspecified</option></select></label></div>
+    <div id="filter-selects-home"><div id="filter-selects"><label class="type-select"><span class="filter-field-label">Robot task</span><select id="task" aria-label="Robot task"><option value="">All tasks</option>${tasks.map(t=>`<option value="${t.id}">${t.name}</option>`).join('')}</select></label>
+    <label class="type-select"><span class="filter-field-label">Presentation</span><select id="presentation" aria-label="Presentation type"><option value="">All presentations</option><option>Oral</option><option>Spotlight</option><option>Poster</option><option>Interactive</option><option>Blue Sky</option><option>Talk</option><option value="Accepted">Accepted · type unspecified</option></select></label></div></div></div>
     <label class="edition-select"><span class="mono">EDITION</span><select id="edition" aria-label="Conference year"><option value="all">All years</option>${Array.from({length:10},(_,i)=>2026-i).map(y=>`<option value="${y}">${y}</option>`).join('')}</select></label>
-    <button class="collection active" id="all-papers"><span>All papers</span><span id="total" class="mono">—</span></button>
+    <button id="open-filters" class="mobile-filter-button" aria-haspopup="dialog" aria-controls="mobile-filters">${icon('filters')} Filters <span id="filter-count" hidden></span></button>
+    <div class="library-controls"><button class="collection active" id="all-papers"><span>All papers</span><span id="total" class="mono">—</span></button>
     <button class="collection" id="saved-papers"><span>${icon('bookmark')} Reading list</span><span id="saved-count" class="mono">0</span></button>
     <button class="collection" id="shared-papers" hidden><span>${icon('share')} Shared list</span><span id="shared-count" class="mono">0</span></button>
-    <button id="share-list" class="share-list">${icon('share')} Share reading list</button>
-    <div class="topic-row"><span class="mono topic-label">EXPLORE BY THEME</span><div id="topics" class="topics"></div></div>
+    <button id="share-list" class="share-list" aria-label="Share reading list">${icon('share')}<span>Share reading list</span></button></div>
+    <div id="filter-topics-home"><div class="topic-row"><span class="mono topic-label">EXPLORE BY THEME</span><div id="topics" class="topics"></div></div></div>
     <div class="sidebar-foot"><a href="/trends.html">Trends 2017-2026</a></div>
   </aside><main><section class="explore" aria-label="Explore papers">
     <div class="results-toolbar"><div><h2 id="results-heading">The 2026 Collection</h2><span class="mono results-count" id="results-count" role="status">Loading the index…</span></div><div class="view-controls"><label class="sort-label"><select id="sort" aria-label="Sort papers"><option value="featured">Featured first</option><option value="title">Title A–Z</option></select></label><div class="view-toggle" aria-label="Card layout"><button data-view="grid" aria-label="Grid view">${icon('grid')}<span>Grid</span></button><button data-view="stack" aria-label="Stack view">${icon('stack')}<span>Stack</span></button></div></div></div>
     <div id="shared-banner"></div><div id="active-filters"></div><div id="papers" class="paper-grid"><div class="loading-state mono">LOADING PAPERS…</div></div><div class="load-more-wrap"><button id="load-more" class="load-more">Load more papers ${icon('arrow')}</button></div>
     <footer class="main-footer">For curious minds and wondrous machines.</footer>
   </section></main></div>
+  <dialog id="mobile-filters" class="filter-dialog" aria-labelledby="filter-title"><div class="filter-sheet"><div class="filter-header"><h2 id="filter-title">Find your papers.</h2><button data-close aria-label="Close filters" autofocus>${icon('close')}</button></div><div id="filter-sheet-body" class="filter-sheet-body"></div><div class="filter-footer"><button id="clear-mobile-filters">Clear filters</button><button id="show-filter-results" class="primary-button" data-close>Show papers ${icon('arrow')}</button></div></div></dialog>
   <dialog id="reader" class="reader"><div class="reader-top"><span class="mono">CORL / PAPER READER</span><button data-close aria-label="Close paper">${icon('close')}</button></div><div id="reader-body"></div></dialog>
   <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title"><div class="reader-top"><span class="mono">PASS IT ON</span><button data-close aria-label="Close sharing">${icon('close')}</button></div><div class="share-body"><h2 id="share-title">Share a little curiosity.</h2><p id="share-description"></p><label class="share-label">List name<input id="list-name" maxlength="100" value="My CoRL reading list"/></label><label class="share-label">Share link<input id="share-url" readonly aria-label="Share link"/></label><div class="share-actions"><button id="copy-share" class="primary-button">Copy link ${icon('share')}</button><button id="download-list" class="secondary-button">Download reading list ↓</button></div><p id="share-hint" class="share-hint"></p><p id="share-feedback" role="status"></p></div></dialog>
   <div id="toast" role="status"></div>`;
 
 document.querySelector('#edition').addEventListener('change',e=>{state.year=e.target.value;state.limit=24;render()});
+const mobileLayout=matchMedia('(max-width: 800px)');
+const filterDialog=document.querySelector('#mobile-filters');
+function placeFilters(){
+  if(!mobileLayout.matches&&filterDialog.open)filterDialog.close();
+  document.querySelector(mobileLayout.matches?'#filter-sheet-body':'#filter-selects-home').append(document.querySelector('#filter-selects'));
+  document.querySelector(mobileLayout.matches?'#filter-sheet-body':'#filter-topics-home').append(document.querySelector('.topic-row'));
+}
+mobileLayout.addEventListener('change',placeFilters);
+placeFilters();
 const systemTheme=matchMedia('(prefers-color-scheme: dark)');
 function setTheme(theme,persist=false){
   document.documentElement.dataset.theme=theme;
@@ -74,8 +86,10 @@ function updateUrl() {
   history.replaceState(null,'',`?${p}${location.hash}`);
 }
 function renderTopics() {
+  const focusedTopic=document.activeElement?.dataset.topic;
   const counts = Object.fromEntries(topics.map(t=>[t.id,papers.filter(p=>(state.year==='all'||p.year===Number(state.year))&&p.topics.includes(t.id)).length]));
   document.querySelector('#topics').innerHTML = `<button class="topic ${!state.topic?'active':''}" data-topic="" aria-pressed="${!state.topic}">All themes</button>`+topics.map(t=>`<button class="topic ${state.topic===t.id?'active':''}" data-topic="${t.id}" aria-pressed="${state.topic===t.id}">${esc(t.name)}<span>${counts[t.id]}</span></button>`).join('');
+  if(focusedTopic!==undefined)document.querySelector(`[data-topic="${CSS.escape(focusedTopic)}"]`)?.focus();
 }
 function card(p,index) {
   const tags = p.tasks.length ? p.tasks.slice(0,3).map(id=>({...tasks.find(t=>t.id===id),kind:'task'})) : p.topics.slice(0,2).map(id=>({...topics.find(t=>t.id===id),kind:'topic'}));
@@ -105,6 +119,12 @@ function render() {
   grid.innerHTML=result.length?result.slice(0,state.limit).map(card).join(''):`<div class="empty-state"><span class="empty-symbol">∅</span><h3>${state.savedOnly&&!saved.size?'Room for your next big idea.':'No papers on this frequency.'}</h3><p>${state.savedOnly&&!saved.size?'Bookmark a paper to keep it here for later.':'Try a broader search or clear your filters.'}</p><button id="reset">Show all papers ${icon('arrow')}</button></div>`;
   document.querySelector('#load-more').hidden=result.length<=state.limit;
   document.querySelector('#active-filters').innerHTML=(state.query||state.topic||state.task||state.presentation)?'<button id="reset-filters" class="reset-filters">Clear filters ×</button>':'';
+  const filterCount=[state.task,state.presentation,state.topic].filter(Boolean).length;
+  document.querySelector('#filter-count').textContent=filterCount;
+  document.querySelector('#filter-count').hidden=!filterCount;
+  document.querySelector('#open-filters').classList.toggle('has-filters',filterCount>0);
+  document.querySelector('#show-filter-results').innerHTML=`Show ${result.length} ${result.length===1?'paper':'papers'} ${icon('arrow')}`;
+  document.querySelector('#clear-mobile-filters').disabled=!filterCount;
   renderTopics(); updateUrl();
 }
 function reset() {Object.assign(state,{year:'all',query:'',topic:'',task:'',presentation:'',savedOnly:false,sharedOnly:false,limit:24});document.querySelector('#search').value='';render()}
@@ -126,6 +146,8 @@ document.addEventListener('click',e=>{
   else if(b.dataset.open)openPaper(b.dataset.open);
   else if(b.dataset.save){saved.has(b.dataset.save)?saved.delete(b.dataset.save):saved.add(b.dataset.save);try{localStorage.setItem('corl-saved',JSON.stringify([...saved]))}catch{document.querySelector('#toast').textContent='Bookmarks are available for this session only.'}render();document.querySelector(`[data-save="${b.dataset.save}"]`)?.focus()}
   else if(b.hasAttribute('data-close'))closeDialog(b.closest('dialog'));
+  else if(b.id==='open-filters')openDialog(filterDialog);
+  else if(b.id==='clear-mobile-filters'){Object.assign(state,{task:'',presentation:'',topic:'',limit:24});render()}
   else if(b.id==='theme-toggle')setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark',true);
   else if(b.id==='share-list')openShare();
   else if(b.id==='copy-share')copyShare();
