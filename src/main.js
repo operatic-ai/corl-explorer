@@ -1,4 +1,5 @@
 import './style.css';
+import {mountPaperView,syncPaperBookmark} from './paper-view.js';
 import { summaries } from './summaries.js';
 import { decodeList, shareUrl, readingListHtml } from './sharing.js';
 import { topics, tasks, tagPaper, filterPapers, shortSummary } from './catalog.js';
@@ -12,6 +13,8 @@ const icons = {
   person: '<circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
   bookmark: '<path d="M6 3h12v18l-6-4-6 4z"/>',
   close: '<path d="m6 6 12 12M18 6 6 18"/>',
+  check: '<path d="m5 12 4 4L19 6"/>',
+  copy: '<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>',
   share: '<circle cx="6" cy="12" r="3"/><circle cx="18" cy="5" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.5 10.5 7-4M8.5 13.5l7 4"/>',
   moon: '<path d="M20 14a8 8 0 0 1-10-10 8.5 8.5 0 1 0 10 10z"/>',
   sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',
@@ -29,6 +32,10 @@ let papers = [], catalog;
 let shareIds=[];
 let toastTimer;
 let returnFocus;
+let currentPaperId=params.get('paper')||null;
+let paperReturnScroll=0;
+let paperReturnFocus=null;
+const collectionTitle=document.title;
 
 document.querySelector('#app').innerHTML = `
   <header class="topbar"><a class="brand" href="/" aria-label="CoRL Explorer home"><span class="actuator-logo" aria-hidden="true"><img src="/brand/actuator.svg" alt="" width="48" height="44"/></span><strong>CoRL<span>Explorer</span></strong></a><div class="top-caption mono">2017—2026 · CONFERENCE ON ROBOT LEARNING</div><nav class="page-nav" aria-label="Main navigation"><a href="/" aria-current="page">Papers</a><a href="/trends.html">Trends</a></nav><button id="theme-toggle" class="theme-toggle" aria-label="Dark mode" aria-pressed="false">${icon('moon')}<span>Dark mode</span></button></header>
@@ -45,12 +52,12 @@ document.querySelector('#app').innerHTML = `
     <div id="filter-topics-home"><div class="topic-row"><span class="mono topic-label">EXPLORE BY THEME</span><div id="topics" class="topics"></div></div></div>
     <div class="sidebar-foot"><a href="/trends.html">Trends 2017-2026</a></div>
   </aside><main><section class="explore" aria-label="Explore papers">
-    <div class="results-toolbar"><div><h2 id="results-heading">The 2026 Collection</h2><span class="mono results-count" id="results-count" role="status">Loading the index…</span></div><div class="view-controls"><label class="sort-label"><select id="sort" aria-label="Sort papers"><option value="featured">Featured first</option><option value="title">Title A–Z</option></select></label><div class="view-toggle" aria-label="Card layout"><button data-view="grid" aria-label="Grid view">${icon('grid')}<span>Grid</span></button><button data-view="stack" aria-label="Stack view">${icon('stack')}<span>Stack</span></button></div></div></div>
+    <div class="results-toolbar"><div><h2 id="results-heading" tabindex="-1">The 2026 Collection</h2><span class="mono results-count" id="results-count" role="status">Loading the index…</span></div><div class="view-controls"><label class="sort-label"><select id="sort" aria-label="Sort papers"><option value="featured">Featured first</option><option value="title">Title A–Z</option></select></label><div class="view-toggle" aria-label="Card layout"><button data-view="grid" aria-label="Grid view">${icon('grid')}<span>Grid</span></button><button data-view="stack" aria-label="Stack view">${icon('stack')}<span>Stack</span></button></div></div></div>
     <div id="shared-banner"></div><div id="active-filters"></div><div id="papers" class="paper-grid"><div class="loading-state mono">LOADING PAPERS…</div></div><div class="load-more-wrap"><button id="load-more" class="load-more">Load more papers ${icon('arrow')}</button></div>
     <footer class="main-footer">For curious minds and wondrous machines.</footer>
   </section></main></div>
   <dialog id="mobile-filters" class="filter-dialog" aria-labelledby="filter-title"><div class="filter-sheet"><div class="filter-header"><h2 id="filter-title">Find your papers.</h2><button data-close aria-label="Close filters" autofocus>${icon('close')}</button></div><div id="filter-sheet-body" class="filter-sheet-body"></div><div class="filter-footer"><button id="clear-mobile-filters">Clear filters</button><button id="show-filter-results" class="primary-button" data-close>Show papers ${icon('arrow')}</button></div></div></dialog>
-  <dialog id="reader" class="reader"><div class="reader-top"><span class="mono">CORL / PAPER READER</span><button data-close aria-label="Close paper">${icon('close')}</button></div><div id="reader-body"></div></dialog>
+  <main id="reader" class="paper-reader" aria-labelledby="paper-title" hidden></main>
   <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title"><div class="reader-top"><span class="mono">PASS IT ON</span><button data-close aria-label="Close sharing">${icon('close')}</button></div><div class="share-body"><h2 id="share-title">Share a little curiosity.</h2><p id="share-description"></p><label class="share-label">List name<input id="list-name" maxlength="100" value="My CoRL reading list"/></label><label class="share-label">Share link<input id="share-url" readonly aria-label="Share link"/></label><div class="share-actions"><button id="copy-share" class="primary-button">Copy link ${icon('share')}</button><button id="download-list" class="secondary-button">Download reading list ↓</button></div><p id="share-hint" class="share-hint"></p><p id="share-feedback" role="status"></p></div></dialog>
   <div id="toast" role="status"></div>`;
 
@@ -84,7 +91,8 @@ function updateUrl() {
   if(state.task) p.set('task',state.task);
   if(state.presentation) p.set('type',state.presentation);
   if(state.view==='stack') p.set('view','stack');
-  history.replaceState(null,'',`?${p}${location.hash}`);
+  if(currentPaperId)p.set('paper',currentPaperId);
+  history.replaceState(history.state,'',`?${p}${location.hash}`);
 }
 function renderTopics() {
   const focusedTopic=document.activeElement?.dataset.topic;
@@ -127,17 +135,55 @@ function render() {
   document.querySelector('#show-filter-results').innerHTML=`Show ${result.length} ${result.length===1?'paper':'papers'} ${icon('arrow')}`;
   document.querySelector('#clear-mobile-filters').disabled=!filterCount;
   renderTopics(); updateUrl();
+  if(currentPaperId)syncPaperBookmark(document.querySelector('#reader'),saved.has(currentPaperId));
 }
 function reset() {Object.assign(state,{year:'all',query:'',topic:'',task:'',presentation:'',savedOnly:false,sharedOnly:false,limit:24});document.querySelector('#search').value='';render()}
 function openDialog(dialog) { returnFocus=document.activeElement; dialog.showModal(); document.body.classList.add('modal-open'); }
 function closeDialog(dialog) { dialog.close(); }
-document.querySelectorAll('dialog').forEach(d=>{d.addEventListener('close',()=>{document.body.classList.remove('modal-open');if(d.id==='reader')document.querySelector('#reader-body').innerHTML='';returnFocus?.focus()});d.addEventListener('click',e=>{if(e.target===d)d.close()})});
-function openPaper(id) {
-  const p=papers.find(p=>p.id===id); if(!p)return;
-  const pdf=p.localPdf || (p.arxivUrl ? p.arxivUrl.replace('/abs/','/pdf/') : p.pdfUrl);
-  document.querySelector('#reader-body').innerHTML=`<div class="reader-heading"><div><span class="mono">${p.year} / ${p.presentation.toUpperCase()}</span><h2>${esc(p.title)}</h2><p>${esc(p.authors?.join(', ')||'Authors not yet indexed')}</p><div class="reader-sources">${p.forumUrl?`<a href="${esc(p.forumUrl)}" target="_blank" rel="noreferrer">OpenReview record ↗</a>`:`<a href="${esc(p.proceedingsUrl)}" target="_blank" rel="noreferrer">Proceedings ↗</a>`}${p.arxivUrl?`<a href="${esc(p.arxivUrl)}" target="_blank" rel="noreferrer">arXiv preprint ↗</a>`:'<span>No verified arXiv match</span>'}</div></div><a class="pdf-link" href="${esc(pdf)}" target="_blank" rel="noreferrer">Open PDF ${icon('external')}</a></div><div class="reader-notice">${p.localPdf||p.arxivUrl?'Public preprint version; it may differ from the accepted manuscript.':p.forumUrl?'OpenReview may ask you to verify access.':'Published proceedings PDF.'} If the reader is blank, <a href="${esc(pdf)}" target="_blank" rel="noreferrer">open the PDF in a new tab</a>. ${p.forumUrl?`<a href="${esc(p.forumUrl)}" target="_blank" rel="noreferrer">OpenReview discussion ↗</a>`:''}</div><iframe src="${esc(pdf)}#view=FitH" title="PDF: ${esc(p.title)}"></iframe>`;
-  openDialog(document.querySelector('#reader'));
+document.querySelectorAll('dialog').forEach(d=>{d.addEventListener('close',()=>{document.body.classList.remove('modal-open');returnFocus?.focus()});d.addEventListener('click',e=>{if(e.target===d)d.close()})});
+function toggleSaved(id){
+  saved.has(id)?saved.delete(id):saved.add(id);
+  try{localStorage.setItem('corl-saved',JSON.stringify([...saved]))}catch{notify('Bookmarks are available for this session only.')}
+  render();
 }
+function openPaper(id,{push=true}={}) {
+  const p=papers.find(p=>p.id===id);
+  if(!p){currentPaperId=null;updateUrl();notify('This paper is not available in the index.');return;}
+  const reader=document.querySelector('#reader');
+  if(reader.hidden){paperReturnScroll=scrollY;paperReturnFocus=document.activeElement;}
+  currentPaperId=id;
+  if(push){
+    const url=new URL(location.href);url.searchParams.set('paper',id);
+    history.pushState({corlPaper:true},'',url);
+  }
+  mountPaperView(reader,p,{
+    icon,isSaved:()=>saved.has(id),onBookmark:()=>toggleSaved(id),onClose:closePaper,
+    onCopyLink:()=>{
+      const url=new URL(location.origin+location.pathname);url.searchParams.set('year',p.year);url.searchParams.set('paper',p.id);
+      return navigator.clipboard.writeText(url.href);
+    },
+  });
+  document.querySelector('.shell').hidden=true;reader.hidden=false;
+  document.title=`${p.title} — CoRL Explorer`;
+  scrollTo(0,0);reader.querySelector('#paper-title').focus({preventScroll:true});
+}
+function finishClosePaper(){
+  const id=currentPaperId;currentPaperId=null;
+  const reader=document.querySelector('#reader');reader.hidden=true;reader.innerHTML='';
+  document.querySelector('.shell').hidden=false;document.title=collectionTitle;
+  const restored=paperReturnFocus?.isConnected&&!paperReturnFocus.closest('#reader')&&paperReturnFocus!==document.body?paperReturnFocus:document.querySelector(`.paper-card h3 [data-open="${CSS.escape(id||'')}"]`)||document.querySelector('#results-heading');
+  restored.focus({preventScroll:true});scrollTo(0,paperReturnScroll);
+}
+function closePaper(){
+  if(history.state?.corlPaper){history.back();return;}
+  finishClosePaper();updateUrl();
+}
+addEventListener('popstate',()=>{
+  const id=new URLSearchParams(location.search).get('paper');
+  if(id)openPaper(id,{push:false});
+  else if(currentPaperId)finishClosePaper();
+});
+document.querySelector('.page-nav a[href="/"]').addEventListener('click',e=>{if(currentPaperId){e.preventDefault();closePaper()}});
 document.addEventListener('click',e=>{
   const b=e.target.closest('button');if(!b)return;
   if(b.hasAttribute('data-topic')){state.topic=b.dataset.topic;state.limit=24;render()}
@@ -145,7 +191,7 @@ document.addEventListener('click',e=>{
   else if(b.dataset.year){state.year=b.dataset.year;state.limit=24;render()}
   else if(b.dataset.view){state.view=b.dataset.view;render()}
   else if(b.dataset.open)openPaper(b.dataset.open);
-  else if(b.dataset.save){saved.has(b.dataset.save)?saved.delete(b.dataset.save):saved.add(b.dataset.save);try{localStorage.setItem('corl-saved',JSON.stringify([...saved]))}catch{document.querySelector('#toast').textContent='Bookmarks are available for this session only.'}render();document.querySelector(`[data-save="${b.dataset.save}"]`)?.focus()}
+  else if(b.dataset.save){toggleSaved(b.dataset.save);document.querySelector(`[data-save="${b.dataset.save}"]`)?.focus()}
   else if(b.hasAttribute('data-close'))closeDialog(b.closest('dialog'));
   else if(b.id==='open-filters')openDialog(filterDialog);
   else if(b.id==='clear-mobile-filters'){Object.assign(state,{task:'',presentation:'',topic:'',limit:24});render()}
@@ -166,7 +212,7 @@ document.querySelector('#search').addEventListener('input',e=>{state.query=e.tar
 document.querySelector('#presentation').addEventListener('change',e=>{state.presentation=e.target.value;state.limit=24;render()});
 document.querySelector('#task').addEventListener('change',e=>{state.task=e.target.value;state.limit=24;render()});
 document.querySelector('#sort').addEventListener('change',e=>{state.sort=e.target.value;render()});
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();document.querySelector('#search').focus()}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&currentPaperId&&!document.querySelector('dialog[open]')){e.preventDefault();closePaper();return;}if(e.key==='/'&&!currentPaperId&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();document.querySelector('#search').focus()}});
 function clearSearchFilters(){Object.assign(state,{query:'',topic:'',task:'',presentation:'',limit:24});document.querySelector('#search').value='';}
 function notify(message){clearTimeout(toastTimer);document.querySelector('#toast').textContent=message;toastTimer=setTimeout(()=>document.querySelector('#toast').textContent='',4000);}
 function renderSharedBanner(){
@@ -226,6 +272,7 @@ async function load() {
     if(!topics.some(t=>t.id===state.topic))state.topic='';
     if(!tasks.some(t=>t.id===state.task))state.task='';
     render();
+    if(currentPaperId)openPaper(currentPaperId,{push:false});
   } catch {document.querySelector('#papers').innerHTML='<div class="empty-state"><h3>The index couldn’t load.</h3><p>Please reload the page to try again.</p></div>';document.querySelector('#results-count').textContent='INDEX UNAVAILABLE';document.querySelector('#load-more').hidden=true;}
 }
 load();
