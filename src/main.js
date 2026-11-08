@@ -164,7 +164,7 @@ function openPaper(id,{push=true}={}) {
     },
   });
   document.querySelector('.shell').hidden=true;reader.hidden=false;
-  document.title=`${p.title} — CoRL Explorer`;
+  document.title=`${p.title} – CoRL Paper Explorer`;
   scrollTo(0,0);reader.querySelector('#paper-title').focus({preventScroll:true});
 }
 function finishClosePaper(){
@@ -266,8 +266,12 @@ async function load() {
     const response=await fetch('/data/index.json');if(!response.ok)throw new Error('Catalog unavailable');catalog=await response.json();
     const datasets=await Promise.all(catalog.years.map(async y=>{const r=await fetch(y.file);if(!r.ok)throw new Error(`Edition ${y.year} unavailable`);return r.json()}));
     let enrichment={};try{const r=await fetch('/data/enrichment.json');if(r.ok)enrichment=await r.json()}catch{}
-    const [previews,presentations]=await Promise.all(['previews','presentations'].map(async name=>{try{const r=await fetch(`/data/${name}.json`);return r.ok?await r.json():{}}catch{return {}}}));
-    papers=datasets.flatMap(d=>d.papers).map(p=>tagPaper({...p,...(p.year===2026?enrichment[p.id]:{}),...previews[p.id],...presentations[p.id],...(summaries[p.id]?{tldr:summaries[p.id],summaryMethod:'Abstract-based paraphrase'}:{})}));
+    const [previews,presentations,arxivMatches]=await Promise.all(['previews','presentations','arxiv-matches'].map(async name=>{try{const r=await fetch(`/data/${name}.json`);return r.ok?await r.json():{}}catch{return {}}}));
+    papers=datasets.flatMap(d=>d.papers).map(p=>{
+      const record={...p,...(p.year===2026?enrichment[p.id]:{}),...previews[p.id],...presentations[p.id],...(summaries[p.id]?{tldr:summaries[p.id],summaryMethod:'Abstract-based paraphrase'}:{})};
+      if(!record.arxivUrl&&arxivMatches[p.id]?.arxivUrl)record.arxivUrl=arxivMatches[p.id].arxivUrl;
+      return tagPaper(record);
+    });
     if(state.year!=='all'&&!catalog.years.some(y=>String(y.year)===state.year))state.year='all';
     if(!topics.some(t=>t.id===state.topic))state.topic='';
     if(!tasks.some(t=>t.id===state.task))state.task='';
