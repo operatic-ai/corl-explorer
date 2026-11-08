@@ -1,0 +1,25 @@
+{
+  "name": "corl-explorer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "playwright test",
+    "data:enrich": "python3 scripts/enrich-papers.py",
+    "data:history": "python3 scripts/import-history.py",
+    "data:refresh": "python3 scripts/import-papers.py",
+    "data:presentations": "python3 scripts/import-presentations.py",
+    "data:previews": "python3 scripts/extract-previews.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "vite": "^6.4.1"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  }
+}

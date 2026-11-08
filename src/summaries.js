@@ -1,0 +1,26 @@
+// Concise paraphrases checked against the public paper abstracts.
+// Other papers use attributed extractive contribution summaries.
+export const summaries = {
+  cfzFrOJmKA: 'A shared action space lets different robots learn transferable skills from human motion and robot demonstrations.',
+  NHE9q2cz1n: 'Test-time training gives robot policies 8K steps of context without increasing inference latency.',
+  '5XKFwWrW0v': 'Steer a generalist robot with language, subgoal images, and context that specifies how a task should be done.',
+  f9grq4Ncx9: 'A geometry-aware memory helps robot world models recall occluded scenes and predict more consistent futures.',
+  FVZKpmPHV8: 'Video motion cues and recent robot states help VLAs handle moving objects and distinguish phases of a task.',
+  Bshs9HDDiu: 'DreamZero predicts video and actions together to transfer robot skills to unfamiliar tasks and environments.',
+  TscNG5Wcwn: 'Measure demonstration diversity without training a model, then select a more useful dataset for imitation learning.',
+  c4Z0Y8gvnI: 'Large-scale simulated demonstrations train manipulation policies that transfer to real robots without fine-tuning.',
+  RdvH11pAfJ: 'Four diagnostics reveal shortcuts, overfitting, and statistical weaknesses in common robot manipulation benchmarks.',
+  fHzDEYENPF: 'Combine learned motion forecasts with interpretable traffic rules to improve predictions in mixed traffic.',
+  acslhrig33: 'Train expressive flow-based robot policies from rewards without computing action likelihoods.',
+  RYXo2ktK1M: 'A compact RL token lets small actor-critic heads refine pretrained VLAs through a few hours of robot practice.',
+  WF4X17Al2r: 'Large-scale first-person human video pretraining transfers fine motor skills to dexterous robot hands.',
+  wLgEYxjqid: 'Generate dexterous grasps that match free-form task instructions while remaining physically feasible.',
+  RRl1xXZLdM: 'Pretrain dexterous hands through object play, then adapt those reusable skills to precise assembly.',
+  '03zMMFkTXk': 'Estimate external forces without dedicated sensors, enabling force-aware learning on off-the-shelf robot arms.',
+  hWuk4y2AeR: 'Distill continuous-action tree search into policies for long-horizon rearrangement without search at deployment.',
+  AIInkHZlvB: 'Separate persistent touch, sudden contact events, and predicted contact outcomes to improve precise insertion.',
+  '2dEfANeQL7': 'Generate humanoid demonstrations from 3D scenes and video models, then transfer learned skills to a real robot.',
+  WBGnJHRIso: 'A staged reinforcement-learning curriculum turns one human kick into stable humanoid soccer shooting.',
+  psNqjklVOK: 'One differentiable world model makes learning to track large collections of humanoid motions more efficient.',
+  Q6xWLHyg6x: 'An open action-reasoning model combines embodied reasoning, bimanual data, and efficient continuous control.',
+};

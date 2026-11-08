@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f0f0f0" />
+    <script>
+      try {
+        const choice = localStorage.getItem('corl-theme');
+        document.documentElement.dataset.theme = choice === 'dark' || choice === 'light' ? choice : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      } catch { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+    </script>
+    <meta name="description" content="An independent field guide to robot learning. Explore CoRL papers by task, theme, and year." />
+    <title>CoRL Explorer — A field guide to robot learning</title>
+    <link rel="icon" type="image/svg+xml" href="/brand/actuator.svg" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

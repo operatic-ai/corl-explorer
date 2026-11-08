@@ -1,0 +1,64 @@
+{
+  "years": [
+    {
+      "year": 2026,
+      "count": 687,
+      "sourceUrl": "https://www.corl.org/program/accepted-papers",
+      "file": "/data/2026.json"
+    },
+    {
+      "year": 2025,
+      "count": 263,
+      "sourceUrl": "https://proceedings.mlr.press/v305/",
+      "file": "/data/2025.json"
+    },
+    {
+      "year": 2024,
+      "count": 264,
+      "sourceUrl": "https://proceedings.mlr.press/v270/",
+      "file": "/data/2024.json"
+    },
+    {
+      "year": 2023,
+      "count": 199,
+      "sourceUrl": "https://proceedings.mlr.press/v229/",
+      "file": "/data/2023.json"
+    },
+    {
+      "year": 2022,
+      "count": 197,
+      "sourceUrl": "https://proceedings.mlr.press/v205/",
+      "file": "/data/2022.json"
+    },
+    {
+      "year": 2021,
+      "count": 166,
+      "sourceUrl": "https://proceedings.mlr.press/v164/",
+      "file": "/data/2021.json"
+    },
+    {
+      "year": 2020,
+      "count": 165,
+      "sourceUrl": "https://proceedings.mlr.press/v155/",
+      "file": "/data/2020.json"
+    },
+    {
+      "year": 2019,
+      "count": 110,
+      "sourceUrl": "https://proceedings.mlr.press/v100/",
+      "file": "/data/2019.json"
+    },
+    {
+      "year": 2018,
+      "count": 75,
+      "sourceUrl": "https://proceedings.mlr.press/v87/",
+      "file": "/data/2018.json"
+    },
+    {
+      "year": 2017,
+      "count": 49,
+      "sourceUrl": "https://proceedings.mlr.press/v78/",
+      "file": "/data/2017.json"
+    }
+  ]
+}
