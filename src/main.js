@@ -40,7 +40,7 @@ document.querySelector('#app').innerHTML = `
     <button class="collection" id="shared-papers" hidden><span>${icon('share')} Shared list</span><span id="shared-count" class="mono">0</span></button>
     <button id="share-list" class="share-list">${icon('share')} Share reading list</button>
     <div class="topic-row"><span class="mono topic-label">EXPLORE BY THEME</span><div id="topics" class="topics"></div></div>
-    <div class="sidebar-foot"><a href="/trends.html">Year-on-year trends ↗</a><span class="mono">2017 — 2026</span></div>
+    <div class="sidebar-foot"><a href="/trends.html">Trends 2017-2026</a></div>
   </aside><main><section class="explore" aria-label="Explore papers">
     <div class="results-toolbar"><div><h2 id="results-heading">The 2026 Collection</h2><span class="mono results-count" id="results-count" role="status">Loading the index…</span></div><div class="view-controls"><label class="sort-label"><select id="sort" aria-label="Sort papers"><option value="featured">Featured first</option><option value="title">Title A–Z</option></select></label><div class="view-toggle" aria-label="Card layout"><button data-view="grid" aria-label="Grid view">${icon('grid')}<span>Grid</span></button><button data-view="stack" aria-label="Stack view">${icon('stack')}<span>Stack</span></button></div></div></div>
     <div id="shared-banner"></div><div id="active-filters"></div><div id="papers" class="paper-grid"><div class="loading-state mono">LOADING PAPERS…</div></div><div class="load-more-wrap"><button id="load-more" class="load-more">Load more papers ${icon('arrow')}</button></div>
