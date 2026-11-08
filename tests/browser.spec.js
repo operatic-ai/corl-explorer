@@ -39,7 +39,7 @@ test('reading list persists across reloads and supports removal',async({page})=>
   await page.reload();await page.locator('#saved-papers').click();
   await expect(page.locator(`[data-save="${id}"]`)).toHaveAttribute('aria-pressed','true');
   await page.locator(`[data-save="${id}"]`).click();
-  await expect(page.getByText('Room for your next big idea.')).toBeVisible();
+  await expect(page.getByText('No saves. Bookmark a paper to create your reading list.')).toBeVisible();
 });
 
 test('paper opens a PDF reader with usable external links and keyboard close',async({page})=>{

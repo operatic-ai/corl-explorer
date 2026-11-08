@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f0f0f0" />
     <script>
+      // Opening the source file directly needs the local Vite server.
+      if (location.protocol === 'file:') {
+        location.replace('http://localhost:5173/trends.html' + location.search + location.hash);
+      }
       try {
         const choice = localStorage.getItem('corl-theme');
         document.documentElement.dataset.theme = choice === 'dark' || choice === 'light' ? choice : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
