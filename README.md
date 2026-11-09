@@ -1,21 +1,14 @@
 <div align="center" style="text-align: center;">
-
-<p align="center" style="text-align: center;">
-  <a href="https://corl.operatic.ai"><img src="docs/assets/corl-explorer-banner.png" alt="CoRL Explorer — silver chrome wordmark" width="960" style="display: inline-block; max-width: 100%; height: auto;"></a>
-</p>
-
-<h1 align="center" style="text-align: center;">CoRL Paper Explorer</h1>
-
-<p align="center" style="text-align: center;">
-  <a href="https://corl.operatic.ai"><img src="docs/assets/badges/explore.svg" alt="Explore online" width="125" height="26" style="display: inline-block;"></a>
-  <a href="https://corl.operatic.ai/?year=all"><img src="docs/assets/badges/papers.svg" alt="Accepted papers: 2,175" width="174" height="26" style="display: inline-block;"></a>
-  <a href="#earlier-years"><img src="docs/assets/badges/years.svg" alt="Years: 2017–2026" width="143" height="26" style="display: inline-block;"></a>
-  <a href="#2026-papers"><img src="docs/assets/badges/collection.svg" alt="2026 collection: 687 papers" width="195" height="26" style="display: inline-block;"></a>
+  <a href="https://corl.operatic.ai"><img src="docs/assets/corl-explorer-banner.png" alt="CoRL Explorer — silver chrome wordmark" width="960" style="display: block; max-width: 100%; height: auto; margin: 0 auto;"></a>
+<hr style="margin: 12px 0;">
+<p align="center" style="text-align: center; margin: 0;">
+  <a href="https://corl.operatic.ai"><img src="docs/assets/badges/explore.svg" alt="Explore online" width="106" height="22" style="display: inline-block;"></a>
+  <a href="https://corl.operatic.ai/?year=all"><img src="docs/assets/badges/papers.svg" alt="Accepted papers: 2,175" width="147" height="22" style="display: inline-block;"></a>
+  <a href="#earlier-years"><img src="docs/assets/badges/years.svg" alt="Years: 2017–2026" width="121" height="22" style="display: inline-block;"></a>
+  <a href="#2026-papers"><img src="docs/assets/badges/collection.svg" alt="2026 collection: 687 papers" width="165" height="22" style="display: inline-block;"></a>
 </p>
 
 </div>
-
-10 years of robot learning ~
 
 Explore **2,175 accepted papers** from the Conference on Robot Learning, spanning **2017–2026**. Search by year, task, and theme; read paper summaries, save a reading list, and share it with others.
 

@@ -59,7 +59,7 @@ const badges=[
 ];
 for(const [name,label,value,left,right,color] of badges){
  const width=left+right;
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="26" role="img" aria-label="${label}: ${value}"><title>${label}: ${value}</title><clipPath id="r"><rect width="${width}" height="26" rx="6"/></clipPath><g clip-path="url(#r)"><path fill="#303438" d="M0 0h${left}v26H0z"/><path fill="#${color}" d="M${left} 0h${right}v26H${left}z"/></g><g font-family="Verdana,DejaVu Sans,sans-serif" font-size="11" text-anchor="middle" fill="#fff"><text x="${left/2}" y="17">${label}</text><text x="${left+right/2}" y="17" font-weight="bold">${value}</text></g></svg>\n`;
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="26" viewBox="0 0 ${width} 26" role="img" aria-label="${label}: ${value}"><title>${label}: ${value}</title><clipPath id="r"><rect width="${width}" height="26" rx="6"/></clipPath><g clip-path="url(#r)"><path fill="#303438" d="M0 0h${left}v26H0z"/><path fill="#${color}" d="M${left} 0h${right}v26H${left}z"/></g><g font-family="Verdana,DejaVu Sans,sans-serif" font-size="11" text-anchor="middle" fill="#fff"><text x="${left/2}" y="17">${label}</text><text x="${left+right/2}" y="17" font-weight="bold">${value}</text></g></svg>\n`;
  const file=path.join(root,`docs/assets/badges/${name}.svg`);
  if(process.argv.includes('--check')){
   if(!fs.existsSync(file)||fs.readFileSync(file,'utf8')!==svg)throw new Error(`Stale README badge: ${name}`);
