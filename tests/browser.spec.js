@@ -15,6 +15,12 @@ test('grid and stack preserve search and show concise summaries',async({page})=>
   await page.reload();
   await expect(page.locator('.paper-stack .paper-card')).toHaveCount(1);
   await expect(page.getByRole('textbox',{name:'Search papers'})).toHaveValue('Being-H0.5');
+  await page.getByRole('textbox',{name:'Search papers'}).fill('EmbodiSteer');
+  await expect(page.locator('.paper-card')).toHaveCount(1);
+  const summary='Guides robot policies in joint space to avoid body collisions when transferring to new robots.';
+  await expect(page.locator('.tldr p')).toHaveText(summary);
+  await page.locator('.paper-card h3 button').click();
+  await expect(page.locator('.reading-summary')).toHaveText(summary);
 });
 
 test('task filters, empty search, reset, and historical editions',async({page})=>{

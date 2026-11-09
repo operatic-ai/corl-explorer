@@ -13,7 +13,11 @@
     "data:history": "python3 scripts/import-history.py",
     "data:refresh": "python3 scripts/import-papers.py",
     "data:presentations": "python3 scripts/import-presentations.py",
-    "data:previews": "python3 scripts/extract-previews.py"
+    "data:previews": "python3 scripts/extract-previews.py",
+    "docs:readme": "node scripts/generate-readme.mjs",
+    "docs:check": "node scripts/generate-readme.mjs --check",
+    "docs:gif": "node scripts/capture-demo.mjs",
+    "test:matching": "python3 -m unittest discover -s tests/python -p 'test_*.py'"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",

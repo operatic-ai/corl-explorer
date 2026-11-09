@@ -45,6 +45,18 @@ test('TLDR display is capped at 120 characters without expanding short summaries
   assert.equal(shortSummary(null),'');
 });
 
+test('every 2026 paper has a complete abstract-based TLDR without clipping or fallback',()=>{
+  assert.deepEqual(Object.keys(summaries).sort(),catalog.papers.map(p=>p.id).sort());
+  assert.equal(new Set(Object.values(summaries)).size,catalog.papers.length);
+  for(const {id} of catalog.papers){
+    const text=summaries[id];
+    assert.ok(enrichment[id]?.abstract,`Missing source abstract for ${id}`);
+    assert.ok(text.length>=40&&text.length<=120,`Invalid summary length for ${id}`);
+    assert.ok(text.endsWith('.')&&!text.includes('…'),`Clipped summary for ${id}`);
+    assert.equal(shortSummary(text),text);
+  }
+});
+
 test('all ten editions load with complete metadata and no duplicate paper IDs',()=>{
   const manifest=JSON.parse(fs.readFileSync(new URL('../public/data/index.json',import.meta.url)));
   assert.deepEqual(manifest.years.map(y=>y.year),[2026,2025,2024,2023,2022,2021,2020,2019,2018,2017]);

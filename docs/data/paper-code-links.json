@@ -1,0 +1,1344 @@
+{
+  "VY6U0drX88": {
+    "title": "TBD-VLA: Temporal Block Diffusion Vision Language Action Model",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=VY6U0drX88",
+    "code": [
+      {
+        "url": "https://github.com/TBD-VLA/lerobot",
+        "checkedAt": "2026-11-09T20:44:05+00:00"
+      }
+    ]
+  },
+  "QwpnI3BlwT": {
+    "title": "PRTS: A Primitive Reasoning and Tasking System via Contrastive Representations",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=QwpnI3BlwT",
+    "code": [
+      {
+        "url": "https://github.com/TeleHuman/PRTS",
+        "checkedAt": "2026-11-09T20:44:05+00:00"
+      }
+    ]
+  },
+  "yNHgrgATuY": {
+    "title": "FIBERTUNE: Preserving Action-Fiber Visual Residuals in Vision-Language-Action Fine-Tuning",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=yNHgrgATuY",
+    "code": [
+      {
+        "url": "https://github.com/fibertune/FiberTune",
+        "checkedAt": "2026-11-09T20:44:11+00:00"
+      }
+    ]
+  },
+  "JKoP9L6myQ": {
+    "title": "PoLAR: Factorizing Extent and Mode in Latent Actions for Robot Policy Learning",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=JKoP9L6myQ",
+    "code": [
+      {
+        "url": "https://github.com/joon-stack/PoLAR",
+        "checkedAt": "2026-11-09T20:44:14+00:00"
+      }
+    ]
+  },
+  "IjnCc1OZnJ": {
+    "title": "Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=IjnCc1OZnJ",
+    "code": [
+      {
+        "url": "https://github.com/Apollo-Lab-Yale/artificial-foveated-perception",
+        "checkedAt": "2026-11-09T20:43:56+00:00"
+      },
+      {
+        "url": "https://github.com/Apollo-Lab-Yale/afp-annotation-tool",
+        "checkedAt": "2026-11-09T20:43:56+00:00"
+      }
+    ]
+  },
+  "Q6xWLHyg6x": {
+    "title": "MolmoAct2: Action Reasoning Models for Real-World Deployment",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Q6xWLHyg6x",
+    "code": [
+      {
+        "url": "https://github.com/allenai/molmoact2",
+        "checkedAt": "2026-11-09T20:44:09+00:00"
+      }
+    ]
+  },
+  "rcE4amkjBq": {
+    "title": "GeoProp: Grounding Robot State in Vision for Generalist Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=rcE4amkjBq",
+    "code": [
+      {
+        "url": "https://github.com/alibaba-damo-academy/GeoProp",
+        "checkedAt": "2026-11-09T20:44:09+00:00"
+      }
+    ]
+  },
+  "1uKIsrjCvt": {
+    "title": "Localized Visual Feature Aggregation via Focus Pooling for Visuomotor Policies",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=1uKIsrjCvt",
+    "code": [
+      {
+        "url": "https://github.com/RuiyuWANG/FocusPool",
+        "checkedAt": "2026-11-09T20:44:03+00:00"
+      }
+    ]
+  },
+  "Afq9dTKP09": {
+    "title": "Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Afq9dTKP09",
+    "code": [
+      {
+        "url": "https://github.com/zheyu-zhuang/seeker",
+        "checkedAt": "2026-11-09T20:44:22+00:00"
+      }
+    ]
+  },
+  "aPppmSJzb5": {
+    "title": "TRACE: Trajectory-Routed Causal Memory for Delayed-Evidence Visuomotor Imitation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=aPppmSJzb5",
+    "code": [
+      {
+        "url": "https://github.com/Jeong-zju/corl-trace",
+        "checkedAt": "2026-11-09T20:44:00+00:00"
+      }
+    ]
+  },
+  "TTJ3uxLcxL": {
+    "title": "Chameleon: Control-Indexed Prospective Memory for Visuomotor Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=TTJ3uxLcxL",
+    "code": [
+      {
+        "url": "https://github.com/gxyes/MARS_Chameleon",
+        "checkedAt": "2026-11-09T20:44:13+00:00"
+      }
+    ]
+  },
+  "TZM6J864Lf": {
+    "title": "Gated Memory Policy",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=TZM6J864Lf",
+    "code": [
+      {
+        "url": "https://github.com/real-stanford/gated-memory-policy",
+        "checkedAt": "2026-11-09T20:44:17+00:00"
+      }
+    ]
+  },
+  "8FGH4qAdNB": {
+    "title": "EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=8FGH4qAdNB",
+    "code": [
+      {
+        "url": "https://github.com/InternRobotics/EventVLA",
+        "checkedAt": "2026-11-09T20:43:59+00:00"
+      }
+    ]
+  },
+  "hJv9yhbgxR": {
+    "title": "Native Memory Compression for Long-Horizon Robotic Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=hJv9yhbgxR",
+    "code": [
+      {
+        "url": "https://github.com/OpenDriveLab/NativeMEM",
+        "checkedAt": "2026-11-09T20:44:03+00:00"
+      }
+    ]
+  },
+  "Bshs9HDDiu": {
+    "title": "World Action Models are Zero-shot Policies",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Bshs9HDDiu",
+    "code": [
+      {
+        "url": "https://github.com/dreamzero0/dreamzero",
+        "checkedAt": "2026-11-09T20:44:11+00:00"
+      }
+    ]
+  },
+  "kB0KO1Wife": {
+    "title": "Light-WAM: Efficient World Action Models with State-Fusion Action Decoding",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=kB0KO1Wife",
+    "code": [
+      {
+        "url": "https://github.com/L1ziang/Light-WAM",
+        "checkedAt": "2026-11-09T20:44:01+00:00"
+      }
+    ]
+  },
+  "OIhLrULoIq": {
+    "title": "World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=OIhLrULoIq",
+    "code": [
+      {
+        "url": "https://github.com/SJTU-DENG-Lab/WLA",
+        "checkedAt": "2026-11-09T20:44:04+00:00"
+      }
+    ]
+  },
+  "PniGejQAdF": {
+    "title": "Large Video Planner Enables Generalizable Robot Control",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=PniGejQAdF",
+    "code": [
+      {
+        "url": "https://github.com/buoyancy99/large-video-planner",
+        "checkedAt": "2026-11-09T20:44:11+00:00"
+      }
+    ]
+  },
+  "mHCqiRUiHi": {
+    "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=mHCqiRUiHi",
+    "code": [
+      {
+        "url": "https://github.com/ustcwhy/BitVLA",
+        "checkedAt": "2026-11-09T20:44:18+00:00"
+      }
+    ]
+  },
+  "QBAA8svAIK": {
+    "title": "FedGuide: Diffusion Prior Alignment and Value Baseline Guidance for Heterogeneous Federated Reinforcement Learning",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=QBAA8svAIK",
+    "code": [
+      {
+        "url": "https://github.com/hhhhzl/fedguide",
+        "checkedAt": "2026-11-09T20:44:13+00:00"
+      }
+    ]
+  },
+  "ar3eWq6mh4": {
+    "title": "UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=ar3eWq6mh4",
+    "code": [
+      {
+        "url": "https://github.com/Denghaoyuan123/UniIntervene",
+        "checkedAt": "2026-11-09T20:43:57+00:00"
+      }
+    ]
+  },
+  "GFxjqZVSND": {
+    "title": "M3P-R1: Reinforcement Learning for Large Language Model Guided Multi-Modal Motion Planning via MIP Code Generation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=GFxjqZVSND",
+    "code": [
+      {
+        "url": "https://github.com/XingpengSun0/CoRL-26-M3P-R1",
+        "checkedAt": "2026-11-09T20:44:10+00:00"
+      }
+    ]
+  },
+  "dKRgZYcdRV": {
+    "title": "Object-Centric Conditioning for Visuomotor Flow Matching",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=dKRgZYcdRV",
+    "code": [
+      {
+        "url": "https://github.com/Li-Jijie/Object-Centric-Visuomotor-Flow",
+        "checkedAt": "2026-11-09T20:44:01+00:00"
+      }
+    ]
+  },
+  "HmdwOezjlQ": {
+    "title": "When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=HmdwOezjlQ",
+    "code": [
+      {
+        "url": "https://github.com/yuffish/LIBERO-CF",
+        "checkedAt": "2026-11-09T20:44:21+00:00"
+      }
+    ]
+  },
+  "qHndjmxgs1": {
+    "title": "GeoHAT: Geometry-Adaptive Hybrid Action Transformer for Mobile Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=qHndjmxgs1",
+    "code": [
+      {
+        "url": "https://github.com/XiangyuZhu0995/GeoHAT",
+        "checkedAt": "2026-11-09T20:44:08+00:00"
+      }
+    ]
+  },
+  "cvPjGuUATQ": {
+    "title": "Sim-and-Human Co-training for Data-Efficient and Scene-Generalizable Bimanual Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=cvPjGuUATQ",
+    "code": [
+      {
+        "url": "https://github.com/kaipengfang/SimHum",
+        "checkedAt": "2026-11-09T20:44:14+00:00"
+      }
+    ]
+  },
+  "1HqdYVWaXi": {
+    "title": "ReSiReg: Towards Spatially Consistent Semantics in Language-Conditioned Robotic Tasks",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=1HqdYVWaXi",
+    "code": [
+      {
+        "url": "https://github.com/SimonSchwaiger/resireg",
+        "checkedAt": "2026-11-09T20:44:04+00:00"
+      }
+    ]
+  },
+  "JiMWz6U93i": {
+    "title": "AsyncVLA: An Asynchronous VLA for Fast and Robust Navigation on the Edge",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=JiMWz6U93i",
+    "code": [
+      {
+        "url": "https://github.com/NHirose/AsyncVLA",
+        "checkedAt": "2026-11-09T20:44:02+00:00"
+      }
+    ]
+  },
+  "1zWj66605w": {
+    "title": "G2-Nav: Grounded and Guarded Vision-Language Costmaps for Robot Social Navigation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=1zWj66605w",
+    "code": [
+      {
+        "url": "https://github.com/centiLinda/G2-Nav",
+        "checkedAt": "2026-11-09T20:44:11+00:00"
+      }
+    ]
+  },
+  "RExYYVsLbT": {
+    "title": "Plann3r: Predicting Planning Costs Grounded in 3D",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=RExYYVsLbT",
+    "code": [
+      {
+        "url": "https://github.com/MostlyKIGuess/plann3r-code",
+        "checkedAt": "2026-11-09T20:44:01+00:00"
+      }
+    ]
+  },
+  "dkaxE3v6uu": {
+    "title": "From Imitation to Alignment: Human-Preference Flow Policies for Long-Horizon Sidewalk Navigation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=dkaxE3v6uu",
+    "code": [
+      {
+        "url": "https://github.com/VAIL-UCLA/FlowPilot",
+        "checkedAt": "2026-11-09T20:44:07+00:00"
+      }
+    ]
+  },
+  "7vjPgJ7x2b": {
+    "title": "SafeDriveVLA: Navigation-Conditioned World Model Dreaming for Conflict-Aware End-to-End Autonomous Driving",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=7vjPgJ7x2b",
+    "code": [
+      {
+        "url": "https://github.com/ASGuard-UCI/safedrive-vla",
+        "checkedAt": "2026-11-09T20:43:55+00:00"
+      },
+      {
+        "url": "https://github.com/Daniel-xsy/safedrive-vla",
+        "checkedAt": "2026-11-09T20:43:56+00:00"
+      }
+    ]
+  },
+  "qbninLImrj": {
+    "title": "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=qbninLImrj",
+    "code": [
+      {
+        "url": "https://github.com/worv-ai/CostNav",
+        "checkedAt": "2026-11-09T20:44:19+00:00"
+      }
+    ]
+  },
+  "XA0dFQQlqP": {
+    "title": "PanoVine: Whole-Body Visuomotor Control for Soft Growing Vine Robot",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=XA0dFQQlqP",
+    "code": [
+      {
+        "url": "https://github.com/xxm19/panovine",
+        "checkedAt": "2026-11-09T20:44:20+00:00"
+      }
+    ]
+  },
+  "33H7BChFgI": {
+    "title": "G2G: Exploiting Intra-Group Geometry for Inter-Group Pose Estimation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=33H7BChFgI",
+    "code": [
+      {
+        "url": "https://github.com/WeiYuFei0217/G2G",
+        "checkedAt": "2026-11-09T20:44:07+00:00"
+      }
+    ]
+  },
+  "9gWuAC6Oum": {
+    "title": "Functional-SLAM: Interaction-Aware Mapping with Online Functional Scene Graphs",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=9gWuAC6Oum",
+    "code": [
+      {
+        "url": "https://github.com/Hbelief1998/Functional-SLAM-CoRL_2026",
+        "checkedAt": "2026-11-09T20:43:58+00:00"
+      }
+    ]
+  },
+  "4uXhlSOnz5": {
+    "title": "Learning Contact Representation for Leg Odometry",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=4uXhlSOnz5",
+    "code": [
+      {
+        "url": "https://github.com/egirgin/leg-odometry-contact-representation",
+        "checkedAt": "2026-11-09T20:44:12+00:00"
+      }
+    ]
+  },
+  "BxW31Dilgn": {
+    "title": "MAESTRO: Orchestrating Robotics Modules with Coding Agents for Zero-Shot Generalist Robots",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=BxW31Dilgn",
+    "code": [
+      {
+        "url": "https://github.com/Beethoven-Q/maestro",
+        "checkedAt": "2026-11-09T20:43:57+00:00"
+      }
+    ]
+  },
+  "y1uP4arjzC": {
+    "title": "BarrierFormer: Transformer-Guided Predictive Barrier Enforcement for Safe Robot Control",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=y1uP4arjzC",
+    "code": [
+      {
+        "url": "https://github.com/Safe-Robotics-Group-at-ASU/BarrierFormer",
+        "checkedAt": "2026-11-09T20:44:04+00:00"
+      }
+    ]
+  },
+  "wYLEzeAKFI": {
+    "title": "On the Limits of Sampling-Based Reachability: Geometry, Dynamics, and Sample Complexity",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=wYLEzeAKFI",
+    "code": [
+      {
+        "url": "https://github.com/JeanLew01/reachapprox",
+        "checkedAt": "2026-11-09T20:43:59+00:00"
+      }
+    ]
+  },
+  "CqkIkio00K": {
+    "title": "Simultaneous Forward and Inverse Human-in-the-Loop Optimization",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=CqkIkio00K",
+    "code": [
+      {
+        "url": "https://github.com/kyeongwon-park/SFIHILO",
+        "checkedAt": "2026-11-09T20:44:15+00:00"
+      }
+    ]
+  },
+  "2LNbCnzTQk": {
+    "title": "Automating the Design of Embodied Agent Architectures",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=2LNbCnzTQk",
+    "code": [
+      {
+        "url": "https://github.com/jianzhou0420/AgentCanvas",
+        "checkedAt": "2026-11-09T20:44:14+00:00"
+      }
+    ]
+  },
+  "mw8BgE8ADo": {
+    "title": "LaWAM: Latent World Action Models for Efficient Dynamics-Aware Robot Policies",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=mw8BgE8ADo",
+    "code": [
+      {
+        "url": "https://github.com/RLinf/LaWAM",
+        "checkedAt": "2026-11-09T20:44:03+00:00"
+      }
+    ]
+  },
+  "uHhNEb0OSW": {
+    "title": "Barrier-Constrained Guidance For Real-time Asynchronous VLA Execution",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=uHhNEb0OSW",
+    "code": [
+      {
+        "url": "https://github.com/NamelessCrew/FreeBar",
+        "checkedAt": "2026-11-09T20:44:02+00:00"
+      }
+    ]
+  },
+  "05nE8s5e7I": {
+    "title": "FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=05nE8s5e7I",
+    "code": [
+      {
+        "url": "https://github.com/z-lab/flashvla.git",
+        "checkedAt": "2026-11-09T20:44:22+00:00"
+      },
+      {
+        "url": "https://github.com/z-lab/flashvla",
+        "checkedAt": "2026-11-09T20:44:21+00:00"
+      }
+    ]
+  },
+  "iXJWieKME1": {
+    "title": "F2F-AP: Flow-to-Future Asynchronous Policy for Real-time Dynamic Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=iXJWieKME1",
+    "code": [
+      {
+        "url": "https://github.com/Why-peace/F2F-AP",
+        "checkedAt": "2026-11-09T20:44:07+00:00"
+      }
+    ]
+  },
+  "8TvqhVkrMd": {
+    "title": "APT: Action Expert Pretraining Improves Instruction Generalization of Vision-Language-Action Policies",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=8TvqhVkrMd",
+    "code": [
+      {
+        "url": "https://github.com/xukechun/APT",
+        "checkedAt": "2026-11-09T20:44:20+00:00"
+      }
+    ]
+  },
+  "RmP7m64fQ6": {
+    "title": "VLS: Steering Pretrained Robot Policies via Vision–Language Models",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=RmP7m64fQ6",
+    "code": [
+      {
+        "url": "https://github.com/Vision-Language-Steering/code",
+        "checkedAt": "2026-11-09T20:44:07+00:00"
+      }
+    ]
+  },
+  "aspenN9eir": {
+    "title": "FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=aspenN9eir",
+    "code": [
+      {
+        "url": "https://github.com/microsoft/FlowDAgger",
+        "checkedAt": "2026-11-09T20:44:16+00:00"
+      }
+    ]
+  },
+  "DwRC6la1Kr": {
+    "title": "SeeTraceAct: Visibility-Aware Latent Planning from Cross-Embodiment Demonstration Videos",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=DwRC6la1Kr",
+    "code": [
+      {
+        "url": "https://github.com/jaehyeon-son/SeeTraceAct",
+        "checkedAt": "2026-11-09T20:44:13+00:00"
+      }
+    ]
+  },
+  "cQPnBRGgWM": {
+    "title": "WireCraft: A Simulation Benchmark for Industrial DLO Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=cQPnBRGgWM",
+    "code": [
+      {
+        "url": "https://github.com/WireManip/WireCraft",
+        "checkedAt": "2026-11-09T20:44:08+00:00"
+      }
+    ]
+  },
+  "JMcC5JoPKD": {
+    "title": "FoldNet++: a Large-Scale Synthetic Dataset for Robotic T-Shirt Folding and Unfolding",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=JMcC5JoPKD",
+    "code": [
+      {
+        "url": "https://github.com/GalaxyGeneralRobotics/FoldNetXX",
+        "checkedAt": "2026-11-09T20:43:58+00:00"
+      }
+    ]
+  },
+  "vQmF2cR04D": {
+    "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=vQmF2cR04D",
+    "code": [
+      {
+        "url": "https://github.com/3587jjh/HuRo",
+        "checkedAt": "2026-11-09T20:43:55+00:00"
+      }
+    ]
+  },
+  "EfkPQTtjky": {
+    "title": "EgoWAM: World Action Models Beyond Pixels with In-the-Wild Egocentric Human Data",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=EfkPQTtjky",
+    "code": [
+      {
+        "url": "https://github.com/GaTech-RL2/EgoWAM",
+        "checkedAt": "2026-11-09T20:43:58+00:00"
+      }
+    ]
+  },
+  "acslhrig33": {
+    "title": "Flow Policy Gradients for Robot Control",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=acslhrig33",
+    "code": [
+      {
+        "url": "https://github.com/amazon-far/fpo-control",
+        "checkedAt": "2026-11-09T20:44:10+00:00"
+      }
+    ]
+  },
+  "Tjg1ZvCdXU": {
+    "title": "Behavior Uncloning: Distilling Mode Redirection into Policy Weights without Inference-Time Steering",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Tjg1ZvCdXU",
+    "code": [
+      {
+        "url": "https://github.com/phai-lab/behavior-uncloning",
+        "checkedAt": "2026-11-09T20:44:16+00:00"
+      }
+    ]
+  },
+  "SaMjmUr6xC": {
+    "title": "RAM: Reachability Across Morphologies",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=SaMjmUr6xC",
+    "code": [
+      {
+        "url": "https://github.com/TimWalter/ram",
+        "checkedAt": "2026-11-09T20:44:06+00:00"
+      }
+    ]
+  },
+  "A9AQjk3dAt": {
+    "title": "RoboFollow: Unveiling the Instruction Following Mirage in Embodied Agents",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=A9AQjk3dAt",
+    "code": [
+      {
+        "url": "https://github.com/AutoLab-SAI-SJTU/RoboFollow",
+        "checkedAt": "2026-11-09T20:43:56+00:00"
+      }
+    ]
+  },
+  "qH1h7UkK0k": {
+    "title": "The Imitator Game: Benchmarking Robot Imitative Ability Beyond Action Prediction",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=qH1h7UkK0k",
+    "code": [
+      {
+        "url": "https://github.com/imitator-game/The-Imitator-Game",
+        "checkedAt": "2026-11-09T20:44:13+00:00"
+      }
+    ]
+  },
+  "e9ZYAwJqFR": {
+    "title": "Trajectory-Level Redirection Attacks on Vision-Language-Action Models",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=e9ZYAwJqFR",
+    "code": [
+      {
+        "url": "https://github.com/vla-redirection-attack/vla-trajectory-redirection",
+        "checkedAt": "2026-11-09T20:44:19+00:00"
+      }
+    ]
+  },
+  "Br2rXixvyN": {
+    "title": "MESA: An Evaluation Framework for Compositional, Semantic, and Spatial Generalization in Robotics",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Br2rXixvyN",
+    "code": [
+      {
+        "url": "https://github.com/pairlab/mesa-env",
+        "checkedAt": "2026-11-09T20:44:16+00:00"
+      }
+    ]
+  },
+  "yPkDKkOD11": {
+    "title": "Transformer Transformer: A Unified Model for Motion-Conditioned Robot Co-design",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=yPkDKkOD11",
+    "code": [
+      {
+        "url": "https://github.com/real-stanford/transformer-transformer",
+        "checkedAt": "2026-11-09T20:44:17+00:00"
+      }
+    ]
+  },
+  "AGM5ZQRjOT": {
+    "title": "HiFun: a Hierarchical Framework for Efficient Functional Dexterous Manipulation Learning",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=AGM5ZQRjOT",
+    "code": [
+      {
+        "url": "https://github.com/Hly-123/HiFun-code",
+        "checkedAt": "2026-11-09T20:43:59+00:00"
+      }
+    ]
+  },
+  "JI9u9A9JJO": {
+    "title": "ArtManip: Category-Level Articulated In-Hand Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=JI9u9A9JJO",
+    "code": [
+      {
+        "url": "https://github.com/youngcv/artgym",
+        "checkedAt": "2026-11-09T20:44:21+00:00"
+      }
+    ]
+  },
+  "CtcahYuPBL": {
+    "title": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=CtcahYuPBL",
+    "code": [
+      {
+        "url": "https://github.com/univtac/UniVTAC",
+        "checkedAt": "2026-11-09T20:44:18+00:00"
+      }
+    ]
+  },
+  "7ymfgWpcWw": {
+    "title": "ControlTac: Scaling Tactile Data with Physically Controlled Tactile Image Generation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=7ymfgWpcWw",
+    "code": [
+      {
+        "url": "https://github.com/DongyuLUO/ControlTac",
+        "checkedAt": "2026-11-09T20:43:57+00:00"
+      }
+    ]
+  },
+  "19iADsbO9A": {
+    "title": "Never Too Late for Force: Accelerating VLA Post-Training with Reactive Force Injection",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=19iADsbO9A",
+    "code": [
+      {
+        "url": "https://github.com/y-wng/lift",
+        "checkedAt": "2026-11-09T20:44:21+00:00"
+      }
+    ]
+  },
+  "gn0kBXdK0G": {
+    "title": "DeCAL: Towards Physically-Grounded Dexterous Vision-Language-Action Models via Contact-Aware Latent Co-Imagination",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=gn0kBXdK0G",
+    "code": [
+      {
+        "url": "https://github.com/AureleoPKU/DeCAL",
+        "checkedAt": "2026-11-09T20:43:56+00:00"
+      }
+    ]
+  },
+  "nIbnBCtz79": {
+    "title": "SERF: Spatiotemporal Environment and Robot Feature Map for Long-Horizon Mobile Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=nIbnBCtz79",
+    "code": [
+      {
+        "url": "https://github.com/ExistentialRobotics/SERF-VLA",
+        "checkedAt": "2026-11-09T20:43:58+00:00"
+      },
+      {
+        "url": "https://github.com/ExistentialRobotics/SERF-mapping",
+        "checkedAt": "2026-11-09T20:43:59+00:00"
+      }
+    ]
+  },
+  "FP3mCkMV24": {
+    "title": "Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=FP3mCkMV24",
+    "code": [
+      {
+        "url": "https://github.com/noitom-robotics/AdaPT",
+        "checkedAt": "2026-11-09T20:44:17+00:00"
+      }
+    ]
+  },
+  "9kXz22fI7a": {
+    "title": "HumanoidMimicGen Data Generation for Loco-Manipulation via Whole-Body Planning",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=9kXz22fI7a",
+    "code": [
+      {
+        "url": "https://github.com/NVlabs/humanoidmimicgen",
+        "checkedAt": "2026-11-09T20:44:02+00:00"
+      }
+    ]
+  },
+  "r27erS063s": {
+    "title": "OmniContact: Chaining Meta-Skills via Contact Flow for Generalizable Humanoid Loco-Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=r27erS063s",
+    "code": [
+      {
+        "url": "https://github.com/Ingrid789/OmniContact",
+        "checkedAt": "2026-11-09T20:44:00+00:00"
+      },
+      {
+        "url": "https://github.com/Ingrid789/OmniContact_sim2sim",
+        "checkedAt": "2026-11-09T20:43:59+00:00"
+      }
+    ]
+  },
+  "3Ex2nEGqHP": {
+    "title": "Humanoid Hanoi: Investigating Shared Whole-Body Control for Skill-Based Box Rearrangement",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=3Ex2nEGqHP",
+    "code": [
+      {
+        "url": "https://github.com/osudrl/Humanoid_Hanoi",
+        "checkedAt": "2026-11-09T20:44:16+00:00"
+      }
+    ]
+  },
+  "kBoTnjRw4s": {
+    "title": "X-WBC: A Cross-Embodiment Foundation Model for Humanoid Whole-Body Control",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=kBoTnjRw4s",
+    "code": [
+      {
+        "url": "https://github.com/LogosRoboticsGroup/x-wbc",
+        "checkedAt": "2026-11-09T20:44:01+00:00"
+      }
+    ]
+  },
+  "gbchkYm28k": {
+    "title": "HERO: Learning Humanoid End-Effector Control for Visual Whole-Body Open-Vocabulary Object Grasping",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=gbchkYm28k",
+    "code": [
+      {
+        "url": "https://github.com/RunpeiDong/HERO",
+        "checkedAt": "2026-11-09T20:44:03+00:00"
+      }
+    ]
+  },
+  "2tjuz95jmb": {
+    "title": "Reactive Closed-Loop Motion Planning Towards Universal Humanoid Whole-Body Control",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=2tjuz95jmb",
+    "code": [
+      {
+        "url": "https://github.com/zjwzcx/ReactiveBFM",
+        "checkedAt": "2026-11-09T20:44:22+00:00"
+      }
+    ]
+  },
+  "pWDT36r945": {
+    "title": "SPOT: Spatial Perception-Oriented Long-Horizon Humanoid Teleoperation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=pWDT36r945",
+    "code": [
+      {
+        "url": "https://github.com/UMass-Embodied-AGI/SPOT-Unity",
+        "checkedAt": "2026-11-09T20:44:06+00:00"
+      }
+    ]
+  },
+  "mjvsJNQuFV": {
+    "title": "FT-WBC: Learning Fault-Tolerant Whole-Body Control for Legged Loco-Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=mjvsJNQuFV",
+    "code": [
+      {
+        "url": "https://github.com/hhhappyshow/FT-WBC-Learning-Fault-Tolerant-Whole-Body-Control-for-Legged-Loco-Manipulation",
+        "checkedAt": "2026-11-09T20:44:12+00:00"
+      }
+    ]
+  },
+  "WxBKiMUZtI": {
+    "title": "ContactMimic: Humanoid Object Interaction via Contact Control",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=WxBKiMUZtI",
+    "code": [
+      {
+        "url": "https://github.com/lixinyao11/ContactMimic",
+        "checkedAt": "2026-11-09T20:44:15+00:00"
+      }
+    ]
+  },
+  "uoFfrJHHq8": {
+    "title": "AcroRL: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=uoFfrJHHq8",
+    "code": [
+      {
+        "url": "https://github.com/rislab/acrorl",
+        "checkedAt": "2026-11-09T20:44:17+00:00"
+      }
+    ]
+  },
+  "8iFziu27Yy": {
+    "title": "AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=8iFziu27Yy",
+    "code": [
+      {
+        "url": "https://github.com/ambench/ambench",
+        "checkedAt": "2026-11-09T20:44:10+00:00"
+      }
+    ]
+  },
+  "Zts11nHGLq": {
+    "title": "Hierarchical Planning with Latent World Models",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Zts11nHGLq",
+    "code": [
+      {
+        "url": "https://github.com/kevinghst/HWM_PLDM",
+        "checkedAt": "2026-11-09T20:44:15+00:00"
+      }
+    ]
+  },
+  "GMAZdF34n5": {
+    "title": "PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=GMAZdF34n5",
+    "code": [
+      {
+        "url": "https://github.com/RainyRobo/PLaW-VLA",
+        "checkedAt": "2026-11-09T20:44:03+00:00"
+      }
+    ]
+  },
+  "qvOl1xOUtn": {
+    "title": "τ0-WM: A Unified Video-Action World Model for Robotic Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=qvOl1xOUtn",
+    "code": [
+      {
+        "url": "https://github.com/sii-research/tau-0-wm",
+        "checkedAt": "2026-11-09T20:44:17+00:00"
+      }
+    ]
+  },
+  "0w0ylGezd5": {
+    "title": "AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=0w0ylGezd5",
+    "code": [
+      {
+        "url": "https://github.com/xpeng-robotics/AnyWorld",
+        "checkedAt": "2026-11-09T20:44:20+00:00"
+      }
+    ]
+  },
+  "ntHuqgjrgs": {
+    "title": "ImageWAM: Do World Action Models Really Need Video Generation, or Just Image Editing?",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=ntHuqgjrgs",
+    "code": [
+      {
+        "url": "https://github.com/yuyangalin/ImageWAM",
+        "checkedAt": "2026-11-09T20:44:22+00:00"
+      }
+    ]
+  },
+  "Ih059VNeWq": {
+    "title": "MaskWAM: Unifying Mask Prompting and Prediction for World-Action Models",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Ih059VNeWq",
+    "code": [
+      {
+        "url": "https://github.com/hanyangyu1021/maskwam",
+        "checkedAt": "2026-11-09T20:44:12+00:00"
+      }
+    ]
+  },
+  "ShBMWDRPVu": {
+    "title": "μ0: A Scalable 3D Interaction-Trace World Model",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=ShBMWDRPVu",
+    "code": [
+      {
+        "url": "https://github.com/Yoonkyo/mu0",
+        "checkedAt": "2026-11-09T20:44:09+00:00"
+      },
+      {
+        "url": "https://github.com/Yoonkyo/TraceExtract",
+        "checkedAt": "2026-11-09T20:44:10+00:00"
+      }
+    ]
+  },
+  "9uM5JbXz4T": {
+    "title": "StressDream: Steering Video World Models for Robust Policy Evaluation and Improvement",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=9uM5JbXz4T",
+    "code": [
+      {
+        "url": "https://github.com/CMU-IntentLab/StressDream",
+        "checkedAt": "2026-11-09T20:43:56+00:00"
+      }
+    ]
+  },
+  "FLxpmRskLG": {
+    "title": "Universal Manipulation Exoskeleton: Learning Compliant Whole-body Policies with Real-time Torque Feedback",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=FLxpmRskLG",
+    "code": [
+      {
+        "url": "https://github.com/inclusionAI/Universal-Manipulation-Exoskeleton",
+        "checkedAt": "2026-11-09T20:44:14+00:00"
+      }
+    ]
+  },
+  "8MNr0evyJT": {
+    "title": "A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=8MNr0evyJT",
+    "code": [
+      {
+        "url": "https://github.com/yunhaif/regrind",
+        "checkedAt": "2026-11-09T20:44:21+00:00"
+      }
+    ]
+  },
+  "SMKzI5HX9P": {
+    "title": "H2RBench: A Real-to-Sim Benchmark for Evaluating Human-to-Robot Transfer",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=SMKzI5HX9P",
+    "code": [
+      {
+        "url": "https://github.com/xiaochy/H2RBench",
+        "checkedAt": "2026-11-09T20:44:20+00:00"
+      }
+    ]
+  },
+  "sitHOFsi2x": {
+    "title": "Do as I Do: Dexterous Manipulation Data from Everyday Human Videos",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=sitHOFsi2x",
+    "code": [
+      {
+        "url": "https://github.com/malik-group/do-as-i-do",
+        "checkedAt": "2026-11-09T20:44:15+00:00"
+      }
+    ]
+  },
+  "lHDmYo4bzs": {
+    "title": "SEED-UMI: Sharing the Exoskeleton between human and robot for onE-to-one Dexterous demonstration",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=lHDmYo4bzs",
+    "code": [
+      {
+        "url": "https://github.com/Tengbo-Yu/SEED-UMI",
+        "checkedAt": "2026-11-09T20:44:05+00:00"
+      }
+    ]
+  },
+  "yaYM35u9Su": {
+    "title": "WARP-RM: A Warp-Augmented Relative Progress Reward Model for Data Curation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=yaYM35u9Su",
+    "code": [
+      {
+        "url": "https://github.com/uynitsuj/WARP-RM",
+        "checkedAt": "2026-11-09T20:44:19+00:00"
+      }
+    ]
+  },
+  "h4x4aofBgS": {
+    "title": "UniLab: A Heterogeneous Architecture for Robot RL Beyond GPU-Dominant Paradigms",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=h4x4aofBgS",
+    "code": [
+      {
+        "url": "https://github.com/unilabsim/UniLab",
+        "checkedAt": "2026-11-09T20:44:18+00:00"
+      },
+      {
+        "url": "https://github.com/Motphys/UniLab",
+        "checkedAt": "2026-11-09T20:44:01+00:00"
+      }
+    ]
+  },
+  "SUV5PudsyI": {
+    "title": "SCoCaT: Success Conditioned Constrained Reinforcement Learning for Spacecraft Docking",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=SUV5PudsyI",
+    "code": [
+      {
+        "url": "https://github.com/snt-spacer/scocat-cstr-RL-docking",
+        "checkedAt": "2026-11-09T20:44:18+00:00"
+      }
+    ]
+  },
+  "8gqhCYKrxR": {
+    "title": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=8gqhCYKrxR",
+    "code": [
+      {
+        "url": "https://github.com/NVlabs/SimFoundry",
+        "checkedAt": "2026-11-09T20:44:01+00:00"
+      },
+      {
+        "url": "https://github.com/NVlabs/simfoundry",
+        "checkedAt": "2026-11-09T20:44:02+00:00"
+      }
+    ]
+  },
+  "db6WHoqH91": {
+    "title": "RoboAug: One Annotation to Hundreds of Scenes via Region-Contrastive Data Augmentation for Robotic Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=db6WHoqH91",
+    "code": [
+      {
+        "url": "https://github.com/Open-X-Humanoid/RoboAug.git",
+        "checkedAt": "2026-11-09T20:44:02+00:00"
+      }
+    ]
+  },
+  "pLyDkcGbkT": {
+    "title": "RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=pLyDkcGbkT",
+    "code": [
+      {
+        "url": "https://github.com/robolineage/robolineage",
+        "checkedAt": "2026-11-09T20:44:17+00:00"
+      }
+    ]
+  },
+  "Qa1Uu7lc8n": {
+    "title": "Dex4D: Task-Agnostic Point Track Policy for Zero-Shot Dexterous Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Qa1Uu7lc8n",
+    "code": [
+      {
+        "url": "https://github.com/Dex4D/Dex4D-Simulation",
+        "checkedAt": "2026-11-09T20:43:57+00:00"
+      },
+      {
+        "url": "https://github.com/Dex4D/Dex4D-Vision",
+        "checkedAt": "2026-11-09T20:43:58+00:00"
+      },
+      {
+        "url": "https://github.com/Dex4D/Dex4D-Hardware",
+        "checkedAt": "2026-11-09T20:43:57+00:00"
+      }
+    ]
+  },
+  "0HLj8l0bB4": {
+    "title": "AssemLM: A Spatial Reasoning Multimodal Large Language Model for Robotic Assembly",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=0HLj8l0bB4",
+    "code": [
+      {
+        "url": "https://github.com/TeleHuman/AssemLM",
+        "checkedAt": "2026-11-09T20:44:05+00:00"
+      }
+    ]
+  },
+  "KdaClHHEUt": {
+    "title": "T-Rex: Tactile-Reactive Dexterous Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=KdaClHHEUt",
+    "code": [
+      {
+        "url": "https://github.com/ZhuoyangLiu2005/T-Rex",
+        "checkedAt": "2026-11-09T20:44:09+00:00"
+      }
+    ]
+  },
+  "TH0fdttVB0": {
+    "title": "TacStyle: Personalizing Tactile Robot Policies using Structured Behavior Representations",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=TH0fdttVB0",
+    "code": [
+      {
+        "url": "https://github.com/Anonymouslab2026/TacStyle",
+        "checkedAt": "2026-11-09T20:43:55+00:00"
+      }
+    ]
+  },
+  "w2H90oEzfp": {
+    "title": "ForceBand: Learning Forceful Manipulation with sEMG",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=w2H90oEzfp",
+    "code": [
+      {
+        "url": "https://github.com/Bottle101/ForceBand",
+        "checkedAt": "2026-11-09T20:43:57+00:00"
+      }
+    ]
+  },
+  "oias4zZRUn": {
+    "title": "Unleashing Infinite Motion: Scaling Expressive Quadrupedal Motion via Generative Video Priors",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=oias4zZRUn",
+    "code": [
+      {
+        "url": "https://github.com/Amap-Robotics/Quad-Imaginarium",
+        "checkedAt": "2026-11-09T20:43:55+00:00"
+      }
+    ]
+  },
+  "YQoaLlpDD3": {
+    "title": "Morphology-Conditioned World Model for Cross-Embodiment Quadrupedal Locomotion",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=YQoaLlpDD3",
+    "code": [
+      {
+        "url": "https://github.com/modanesh/QWM",
+        "checkedAt": "2026-11-09T20:44:15+00:00"
+      }
+    ]
+  },
+  "EL8hXhrhFK": {
+    "title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=EL8hXhrhFK",
+    "code": [
+      {
+        "url": "https://github.com/TeleHuman/Textop",
+        "checkedAt": "2026-11-09T20:44:05+00:00"
+      },
+      {
+        "url": "https://github.com/TeleHuman/TextOp",
+        "checkedAt": "2026-11-09T20:44:05+00:00"
+      }
+    ]
+  },
+  "USCrYWxsUc": {
+    "title": "TEXEDO : Test Time Scaling for Controller-aware Language-conditioned Humanoid Motion Generation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=USCrYWxsUc",
+    "code": [
+      {
+        "url": "https://github.com/JianuoCao/TEXEDO",
+        "checkedAt": "2026-11-09T20:44:00+00:00"
+      }
+    ]
+  },
+  "PQdtUNzQLj": {
+    "title": "ADAPT: Analytical Disturbance-Aware Policy Training for Humanoid Locomotion",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=PQdtUNzQLj",
+    "code": [
+      {
+        "url": "https://github.com/blyu413/ADAPT",
+        "checkedAt": "2026-11-09T20:44:11+00:00"
+      }
+    ]
+  },
+  "mday00WZFr": {
+    "title": "Koopman DCM: Unstable Eigenfunctions as Data-driven Representations for Legged Balancing",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=mday00WZFr",
+    "code": [
+      {
+        "url": "https://github.com/stephane-caron/koopman_dcm",
+        "checkedAt": "2026-11-09T20:44:18+00:00"
+      }
+    ]
+  },
+  "TTFZrb0Hw3": {
+    "title": "OpenHLM: An Empirical Recipe for Whole-Body Humanoid Loco-Manipulation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=TTFZrb0Hw3",
+    "code": [
+      {
+        "url": "https://github.com/OpenHLM-project/OpenHLM",
+        "checkedAt": "2026-11-09T20:44:03+00:00"
+      }
+    ]
+  },
+  "EsZGt1eIZr": {
+    "title": "Scaling Self-Play for End-to-End Driving",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=EsZGt1eIZr",
+    "code": [
+      {
+        "url": "https://github.com/montrealrobotics/gigapixel",
+        "checkedAt": "2026-11-09T20:44:16+00:00"
+      }
+    ]
+  },
+  "LqUR3gxKdH": {
+    "title": "DreamStream: Towards Policy-Oriented Generative Simulation for End-to-End Driving",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=LqUR3gxKdH",
+    "code": [
+      {
+        "url": "https://github.com/VAIL-UCLA/DreamStream",
+        "checkedAt": "2026-11-09T20:44:06+00:00"
+      }
+    ]
+  },
+  "B7gccZTJyE": {
+    "title": "DriveMA: Driving Vision-Language-Action Models with verifiable Meta-Actions",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=B7gccZTJyE",
+    "code": [
+      {
+        "url": "https://github.com/Tsinghua-MARS-Lab/DriveMA",
+        "checkedAt": "2026-11-09T20:44:06+00:00"
+      }
+    ]
+  },
+  "EWEKI0rF6v": {
+    "title": "GeoWorldAD: Geometry World Action Model for Autonomous Driving",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=EWEKI0rF6v",
+    "code": [
+      {
+        "url": "https://github.com/wyddmw/GeoWorldAD",
+        "checkedAt": "2026-11-09T20:44:19+00:00"
+      }
+    ]
+  },
+  "Hi8mV09nOi": {
+    "title": "CoFL-S: Spatially Queryable Sector Flow Fields for Local Language-Conditioned Navigation",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=Hi8mV09nOi",
+    "code": [
+      {
+        "url": "https://github.com/ut-dragon-lab/CoFL",
+        "checkedAt": "2026-11-09T20:44:18+00:00"
+      }
+    ]
+  },
+  "sdujBb3P4e": {
+    "title": "FlashDrive: Flash Vision-Language-Action Inference Framework for Autonomous Driving",
+    "source": "https://gisbi-kim.github.io/conference-explorers/corl2026/data.json",
+    "paperSource": "https://openreview.net/forum?id=sdujBb3P4e",
+    "code": [
+      {
+        "url": "https://github.com/z-lab/flashdrive",
+        "checkedAt": "2026-11-09T20:44:21+00:00"
+      }
+    ]
+  }
+}
