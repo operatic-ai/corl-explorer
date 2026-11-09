@@ -1,9 +1,19 @@
-# CoRL Paper Explorer
+<div align="center" style="text-align: center;">
 
-[![Explore online](https://img.shields.io/badge/Explore-online-668C7B?style=flat-square&labelColor=303438)](https://corl.operatic.ai)
-[![Accepted papers: 2,175](https://img.shields.io/badge/Accepted_papers-2%2C175-7696B3?style=flat-square&labelColor=303438)](https://corl.operatic.ai/?year=all)
-[![Years: 2017–2026](https://img.shields.io/badge/Years-2017%E2%80%932026-8B9098?style=flat-square&labelColor=303438)](#earlier-years)
-[![2026 collection: 687 papers](https://img.shields.io/badge/2026_collection-687_papers-668C7B?style=flat-square&labelColor=303438)](#2026-papers)
+<p align="center" style="text-align: center;">
+  <a href="https://corl.operatic.ai"><img src="docs/assets/corl-explorer-banner.png" alt="CoRL Explorer — silver chrome wordmark" width="960" style="display: inline-block; max-width: 100%; height: auto;"></a>
+</p>
+
+<h1 align="center" style="text-align: center;">CoRL Paper Explorer</h1>
+
+<p align="center" style="text-align: center;">
+  <a href="https://corl.operatic.ai"><img src="docs/assets/badges/explore.svg" alt="Explore online" width="125" height="26" style="display: inline-block;"></a>
+  <a href="https://corl.operatic.ai/?year=all"><img src="docs/assets/badges/papers.svg" alt="Accepted papers: 2,175" width="174" height="26" style="display: inline-block;"></a>
+  <a href="#earlier-years"><img src="docs/assets/badges/years.svg" alt="Years: 2017–2026" width="143" height="26" style="display: inline-block;"></a>
+  <a href="#2026-papers"><img src="docs/assets/badges/collection.svg" alt="2026 collection: 687 papers" width="195" height="26" style="display: inline-block;"></a>
+</p>
+
+</div>
 
 10 years of robot learning ~
 
