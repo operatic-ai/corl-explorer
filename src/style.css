@@ -68,3 +68,13 @@
 }
 
 .authors svg{width:13px;height:13px;flex-shrink:0}
+
+.github-star{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:7px 10px;border:1px solid var(--line);border-radius:4px;color:var(--secondary);font-size:10px;text-decoration:none;white-space:nowrap;flex-shrink:0}
+.github-star svg{width:14px;height:14px}.github-star:hover{background:var(--soft);color:var(--ink);border-color:var(--hover)}.github-star:hover svg{fill:var(--bookmark-fill);stroke:var(--bookmark-orange)}
+.topbar .github-star+.theme-toggle{margin-left:0;flex-shrink:0}.theme-symbol{font-size:16px}
+@media(max-width:560px){
+  .topbar{padding:0 12px;gap:6px}.page-nav{gap:10px}
+  .github-star{width:30px;min-height:36px;padding:7px;justify-content:center}.github-star span{display:none}
+  .topbar .theme-toggle{width:28px;min-height:36px;padding:6px;justify-content:center}
+  .theme-toggle>span:not(.theme-symbol){display:none}
+}
