@@ -11,6 +11,7 @@ export function mountPaperView(root,paper,{icon,isSaved,onBookmark,onClose,onCop
     paper.proceedingsUrl&&{name:'Proceedings',url:paper.proceedingsUrl},
     paper.arxivUrl&&{name:'arXiv',url:paper.arxivUrl},
     ...(paper.codeUrls||[]).map((url,i)=>({name:i?'Code '+(i+1):'Code',url})),
+    ...(paper.projectUrls||[]).map((url,i)=>({name:i?'Project '+(i+1):'Project',url})),
   ].filter(Boolean);
   const external=(url,label,className)=>`<a class="${className}" href="${esc(url)}" target="_blank" rel="noreferrer">${label} ${icon('external')}</a>`;
   root.innerHTML=`<div class="reading-shell">

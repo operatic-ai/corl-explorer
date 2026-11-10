@@ -67,6 +67,8 @@ npm run docs:readme
 
 For 2025, use `--smallfry-readme /path/to/README.md` with [smallfry's list](https://github.com/smallfryy/corl-2025-papers). Verified code links live in `public/data/paper-code-links.json`, shared by the site and README.
 
+For broader GitHub and project-page discovery, see [resource sources and matching rules](RESOURCE-LINKS.md).
+
 ## Credits and licenses
 
 Paper content belongs to its authors; topic tags are inferred from titles. Inter and JetBrains Mono licenses are bundled. Neue Machina is licensed separately; redistribution terms still need checking. A project code license is not yet selected.

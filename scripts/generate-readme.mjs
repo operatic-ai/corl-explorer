@@ -19,6 +19,7 @@ const counts=Object.fromEntries(groups.map(([name])=>[name,papers.filter(p=>p.pr
 const output=[
  '## 2026 papers','',
  `${papers.length} accepted papers · ${counts.Oral} oral · ${counts.Spotlight} spotlight · ${counts.Poster} poster`,'',
+ `${papers.filter(p=>code[p.id]?.code?.length).length} papers with code · ${papers.filter(p=>code[p.id]?.projects?.length).length} with project pages`,'',
  '[Oral](#-oral) · [Spotlight](#-spotlight) · [Poster](#-poster) · [Earlier years](#earlier-years)','',
  'Click a paper title to open its summary in the explorer. Authors are shown as first author + remaining authors. TL;DRs are AI-written paraphrases of paper abstracts. Tags are inferred from titles; missing links are left out.','',
 ];
@@ -35,14 +36,15 @@ for(const [presentation,emoji] of groups){
   if(paper.arxivUrl)links.push(link('arXiv',paper.arxivUrl));
   if(paper.forumUrl)links.push(link('OpenReview',paper.forumUrl));
   for(const [i,entry] of (code[paper.id]?.code||[]).entries())links.push(link(i?'Code '+(i+1):'Code',entry.url));
+  for(const [i,entry] of (code[paper.id]?.projects||[]).entries())links.push(link(i?'Project '+(i+1):'Project',entry.url));
   output.push(`| ${link(paper.title,url)} | ${markdown(author)} | ${markdown(summary)} | ${tags.map(markdown).join(' · ')} | ${links.join(' · ')} |`);
  }
  output.push('');
 }
-output.push('## Earlier years','','| Year | Accepted papers | Collection |','| --- | ---: | --- |');
+output.push('## Earlier years','','Code and project counts show papers with at least one indexed link. Open a collection to browse them.','','| Year | Papers | With code | With project pages | Collection |','| --- | ---: | ---: | ---: | --- |');
 for(const edition of editions.slice(1)){
  const year=edition.papers[0].year;
- output.push(`| ${year} | ${edition.papers.length} | [Explore ${year}](https://corl.operatic.ai/?year=${year}) |`);
+ output.push(`| ${year} | ${edition.papers.length} | ${edition.papers.filter(p=>code[p.id]?.code?.length).length} | ${edition.papers.filter(p=>code[p.id]?.projects?.length).length} | [Explore ${year}](https://corl.operatic.ai/?year=${year}) |`);
 }
 output.push('');
 const start='<!-- PAPERS:START -->',end='<!-- PAPERS:END -->';

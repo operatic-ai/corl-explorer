@@ -86,6 +86,24 @@ test('missing optional code data does not prevent paper discovery',async({page})
   await page.reload();
   await expect(page.locator('.paper-card')).toHaveCount(24);
   await expect(page.locator('.paper-links a[aria-label^="Code"]')).toHaveCount(0);
+  await expect(page.locator('.paper-links a[aria-label^="Project"]')).toHaveCount(0);
+});
+
+test('project links are available in cards and readers across editions',async({page})=>{
+  for(const [year,title,url] of [
+    ['2026','TBD-VLA','https://tbd-vla.github.io'],
+    ['2025','ClutterDexGrasp','https://clutterdexgrasp.github.io'],
+  ]){
+    await page.getByLabel('Conference year',{exact:true}).selectOption(year);
+    await page.getByRole('textbox',{name:'Search papers'}).fill(title);
+    await expect(page.locator('.paper-card')).toHaveCount(1);
+    const project=page.locator('.paper-links').getByRole('link',{name:/^Project page for/});
+    await expect(project).toHaveAttribute('href',url);
+    await expect(project).toHaveAttribute('target','_blank');
+    await page.locator('.paper-card h3 button').click();
+    await expect(page.locator('.paper-source-links').getByRole('link',{name:'Project',exact:true})).toHaveAttribute('href',url);
+    await page.getByRole('button',{name:'Back to papers',exact:true}).click();
+  }
 });
 
 test('task filters, empty search, reset, and historical editions',async({page})=>{

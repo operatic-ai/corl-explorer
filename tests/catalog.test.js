@@ -9,20 +9,25 @@ const enrichment = JSON.parse(fs.readFileSync(new URL('../public/data/enrichment
 const papers = catalog.papers.map(p => tagPaper({...p,...enrichment[p.id]}));
 const defaults = {year:'2026',query:'',topic:'',task:'',presentation:'',savedOnly:false,sort:'featured'};
 
-test('code links match indexed papers and retain source attribution',()=>{
+test('code and project links match indexed papers and retain source attribution',()=>{
   const links=JSON.parse(fs.readFileSync(new URL('../public/data/paper-code-links.json',import.meta.url)));
-  const editions=[2025,2026].flatMap(year=>JSON.parse(fs.readFileSync(new URL(`../public/data/${year}.json`,import.meta.url))).papers);
+  const editions=Array.from({length:10},(_,i)=>2017+i).flatMap(year=>JSON.parse(fs.readFileSync(new URL(`../public/data/${year}.json`,import.meta.url))).papers);
   const indexed=new Map(editions.map(p=>[p.id,p]));
   for(const [id,row] of Object.entries(links)){
     const paper=indexed.get(id);
     assert.ok(paper,`Unknown paper ${id}`);
     assert.equal(row.title,paper.title);
-    assert.equal(row.paperSource,paper.forumUrl);
+    assert.equal(row.paperSource,paper.forumUrl||paper.proceedingsUrl);
     assert.ok(row.source.startsWith('https://'));
-    assert.ok(row.code.length>0);
+    assert.ok(row.code.length+(row.projects||[]).length>0);
     assert.equal(new Set(row.code.map(c=>c.url)).size,row.code.length);
     for(const entry of row.code){
       assert.match(entry.url,/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/);
+      assert.ok(Number.isFinite(Date.parse(entry.checkedAt)));
+    }
+    for(const entry of row.projects||[]){
+      assert.ok(['https:','http:'].includes(new URL(entry.url).protocol));
+      assert.ok(entry.source.startsWith('https://'));
       assert.ok(Number.isFinite(Date.parse(entry.checkedAt)));
     }
   }

@@ -74,9 +74,10 @@ def main():
   verified=[{'url':url,'checkedAt':checks[url]['checkedAt']} for url in row['urls'] if checks[url]['status']==200]
   if verified:
    existing=output.get(key)
-   if existing and existing['source']!=source:
-    raise ValueError(f'Review code-link source conflict for {key}')
-   output[key]={'title':row['title'],'source':row['source'],'paperSource':row['paperSource'],'code':verified}
+   if existing:
+    known={entry['url'].lower().rstrip('/') for entry in existing['code']}
+    existing['code'].extend({**entry,'source':source} for entry in verified if entry['url'].lower().rstrip('/') not in known)
+   else:output[key]={'title':row['title'],'source':row['source'],'paperSource':row['paperSource'],'code':verified,'projects':[]}
  target.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
  print(f'Saved code links for {len(output)} papers; {sum(checks[u]["status"]!=200 for u in {u for p in candidates.values() for u in p["urls"]})} unavailable URLs omitted.',flush=True)
 if __name__=='__main__':main()
