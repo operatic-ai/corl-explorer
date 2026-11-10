@@ -10,9 +10,7 @@
 
 </div>
 
-Explore **2,175 CoRL papers** from **2017–2026**, organized by year, task, and theme. Discover ideas, read summaries, and build your reading list.
-
-Browse in grid or stack view, open papers alongside their code and project pages, and share your saved collection.
+Explore 2,175 robotics papers from CoRL (2017–2026), organized by year, task, and theme. Discover ideas, read summaries, and build your reading list. Browse in grid or stack view, see paper code or project pages, and share your saved collection. Happy building :]
 
 **[Explore the papers](https://corl.operatic.ai)** · [Paper trends](https://corl.operatic.ai/trends.html) · [Run locally](docs/DEVELOPMENT.md)
 
@@ -22,13 +20,13 @@ Browse in grid or stack view, open papers alongside their code and project pages
 
 ## 2026 papers
 
-687 accepted papers · 21 oral · 72 spotlight · 594 poster
+687 accepted papers · 21 oral · 72 spotlight · 594 posters
 
 310 papers with code · 507 with project pages
 
 [Oral](#-oral) · [Spotlight](#-spotlight) · [Poster](#-poster) · [Earlier years](#earlier-years)
 
-Click a paper title to open its summary in the explorer. Authors are shown as first author + remaining authors. TL;DRs are AI-written paraphrases of paper abstracts. Tags are inferred from titles; missing links are left out.
+Click a paper title to open its summary in the explorer. Authors are shown as first author + remaining authors. TL;DRs are summaries of paper abstracts. Tags are inferred from titles; missing links are left out.
 
 ### 🏅 Oral
 
@@ -752,6 +750,6 @@ Code and project counts show papers with at least one indexed link. Open a colle
 
 ## Contributing
 
-Found missing code, a project page, or a metadata error? Open an issue or pull request with the paper title, its OpenReview or proceedings link, and the resource URL. See [development and data notes](docs/DEVELOPMENT.md) for setup and regeneration commands.
+Want to contribute or make a correction? Open a PR, and we'll review it! See [development and data notes](docs/DEVELOPMENT.md) for local setup and regeneration commands.
 
-Paper-table format inspired by [smallfryy/corl-2025-papers](https://github.com/smallfryy/corl-2025-papers). Metadata comes from the [official CoRL program](https://www.corl.org/), [OpenReview](https://openreview.net/), [PMLR](https://proceedings.mlr.press/), and [arXiv](https://arxiv.org/); code and project links also draw on [GitHub paper indexes](docs/RESOURCE-LINKS.md) and author-provided links. Each resource records its source and last successful check.
+Paper-table format inspired by [smallfryy/corl-2025-papers](https://github.com/smallfryy/corl-2025-papers). Metadata comes from the [official CoRL program](https://www.corl.org/), [OpenReview](https://openreview.net/), [PMLR](https://proceedings.mlr.press/), and [arXiv](https://arxiv.org/); code and project links also draw on [GitHub paper indexes](docs/RESOURCE-LINKS.md) and author-provided links.

@@ -18,10 +18,10 @@ if(papers.some(p=>!groups.some(([name])=>name===p.presentation)))throw new Error
 const counts=Object.fromEntries(groups.map(([name])=>[name,papers.filter(p=>p.presentation===name).length]));
 const output=[
  '## 2026 papers','',
- `${papers.length} accepted papers · ${counts.Oral} oral · ${counts.Spotlight} spotlight · ${counts.Poster} poster`,'',
+ `${papers.length} accepted papers · ${counts.Oral} oral · ${counts.Spotlight} spotlight · ${counts.Poster} posters`,'',
  `${papers.filter(p=>code[p.id]?.code?.length).length} papers with code · ${papers.filter(p=>code[p.id]?.projects?.length).length} with project pages`,'',
  '[Oral](#-oral) · [Spotlight](#-spotlight) · [Poster](#-poster) · [Earlier years](#earlier-years)','',
- 'Click a paper title to open its summary in the explorer. Authors are shown as first author + remaining authors. TL;DRs are AI-written paraphrases of paper abstracts. Tags are inferred from titles; missing links are left out.','',
+ 'Click a paper title to open its summary in the explorer. Authors are shown as first author + remaining authors. TL;DRs are summaries of paper abstracts. Tags are inferred from titles; missing links are left out.','',
 ];
 for(const [presentation,emoji] of groups){
  output.push(`### ${emoji} ${presentation}`,'','| Paper | Authors | TL;DR | Tasks & themes | Links |','| --- | --- | --- | --- | --- |');
