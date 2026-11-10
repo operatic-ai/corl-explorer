@@ -2,6 +2,45 @@ import {test,expect} from '@playwright/test';
 
 test.beforeEach(async({page})=>{await page.goto('/');await expect(page.locator('.paper-card')).toHaveCount(24)});
 
+test('GitHub stars use the current API count on both pages and cache between visits',async({page})=>{
+  let requests=0;
+  await page.route('**/data/github-stars.json',route=>route.fulfill({json:{stars:3}}));
+  await page.route('https://api.github.com/repos/operatic-ai/corl-explorer',route=>{
+    requests++;
+    return route.fulfill({json:{stargazers_count:29300}});
+  });
+  await page.evaluate(()=>sessionStorage.clear());
+  await page.reload();
+  await expect(page.locator('.github-star')).toHaveAccessibleName('29,300 stars on GitHub');
+  await expect(page.locator('.github-star span')).toHaveText('29.3K');
+  await page.getByRole('link',{name:'Trends',exact:true}).click();
+  await expect(page.locator('.github-star')).toHaveAccessibleName('29,300 stars on GitHub');
+  expect(requests).toBe(1);
+});
+
+test('GitHub stars retain the published count when the API is private or rate limited',async({page})=>{
+  await page.evaluate(()=>sessionStorage.clear());
+  await page.route('**/data/github-stars.json',route=>route.fulfill({json:{stars:3}}));
+  for (const status of [404,403]) {
+    await page.route('https://api.github.com/repos/operatic-ai/corl-explorer',route=>route.fulfill({status,json:{message:'Unavailable'}}));
+    await page.reload();
+    await expect(page.locator('.github-star')).toHaveAccessibleName('3 stars on GitHub');
+    await expect(page.locator('.github-star span')).toHaveText('3');
+    await page.unroute('https://api.github.com/repos/operatic-ai/corl-explorer');
+  }
+});
+
+test('GitHub stars support zero and recover without browser storage',async({page})=>{
+  await page.addInitScript(()=>{
+    Object.defineProperty(window,'sessionStorage',{get(){throw new Error('Storage blocked')}});
+  });
+  await page.route('**/data/github-stars.json',route=>route.fulfill({status:503}));
+  await page.route('https://api.github.com/repos/operatic-ai/corl-explorer',route=>route.fulfill({json:{stargazers_count:0}}));
+  await page.reload();
+  await expect(page.locator('.github-star')).toHaveAccessibleName('0 stars on GitHub');
+  await expect(page.locator('.github-star span')).toHaveText('0');
+});
+
 test('grid and stack preserve search and show concise summaries',async({page})=>{
   await page.getByRole('textbox',{name:'Search papers'}).fill('Being-H0.5');
   await expect(page.locator('.paper-card')).toHaveCount(1);
