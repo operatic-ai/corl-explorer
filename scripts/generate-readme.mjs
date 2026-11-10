@@ -10,7 +10,7 @@ const markdown=text=>String(text).replace(/\s+/g,' ').trim().replace(/&/g,'&amp;
 const link=(label,url)=>`[${markdown(label)}](${encodeURI(url).replaceAll('(','%28').replaceAll(')','%29')})`;
 const editions=Array.from({length:10},(_,i)=>read(`public/data/${2026-i}.json`));
 const enrichment=read('public/data/enrichment.json'),arxiv=read('public/data/arxiv-matches.json'),presentations=read('public/data/presentations.json');
-const code=fs.existsSync(path.join(root,'docs/data/paper-code-links.json'))?read('docs/data/paper-code-links.json'):{};
+const code=fs.existsSync(path.join(root,'public/data/paper-code-links.json'))?read('public/data/paper-code-links.json'):{};
 const papers=editions[0].papers.map(p=>tagPaper({...p,...enrichment[p.id],...presentations[p.id],arxivUrl:enrichment[p.id]?.arxivUrl||p.arxivUrl||arxiv[p.id]?.arxivUrl}));
 if(papers.length!==687||new Set(papers.map(p=>p.id)).size!==687)throw new Error('Expected 687 unique 2026 papers');
 const groups=[['Oral','🏅'],['Spotlight','🌟'],['Poster','📌']];
@@ -70,7 +70,7 @@ for(const [name,label,value,left,right,color] of badges){
 }
 if(process.argv.includes('--check')){
  if(result!==current)throw new Error('README paper tables are stale; run npm run docs:readme');
- console.log(`README verified: ${papers.length} papers, ${Object.keys(code).length} papers with code, 9 historical collections.`);
+ console.log(`README verified: ${papers.length} papers, ${papers.filter(p=>code[p.id]?.code?.length).length} papers with code, 9 historical collections.`);
 }else{
  fs.writeFileSync(target,result);
  console.log(`README generated: ${papers.length} papers; ${Buffer.byteLength(result).toLocaleString()} bytes.`);

@@ -46,7 +46,7 @@ test('grid and stack preserve search and show concise summaries',async({page})=>
   await expect(page.locator('.paper-card')).toHaveCount(1);
   await expect(page.locator('.authors')).toContainText('Hao Luo +');
   await expect(page.locator('.paper-links a').first()).toHaveAttribute('href','https://openreview.net/forum?id=cfzFrOJmKA');
-  await expect(page.locator('.paper-links a').last()).toHaveAttribute('href','https://arxiv.org/abs/2601.12993');
+  await expect(page.getByRole('link',{name:/arXiv preprint for Being-H0.5/})).toHaveAttribute('href','https://arxiv.org/abs/2601.12993');
   await page.getByRole('button',{name:'Stack view',exact:true}).click();
   await expect(page.locator('.paper-stack')).toBeVisible();
   await expect(page.locator('.tldr')).toBeVisible();
@@ -60,6 +60,32 @@ test('grid and stack preserve search and show concise summaries',async({page})=>
   await expect(page.locator('.tldr p')).toHaveText(summary);
   await page.locator('.paper-card h3 button').click();
   await expect(page.locator('.reading-summary')).toHaveText(summary);
+});
+
+test('verified code links follow 2026 and 2025 papers through cards and reader',async({page})=>{
+  for(const [year,title,url] of [
+    ['2026','MolmoAct2','https://github.com/allenai/molmoact2'],
+    ['2025','ScrewSplat','https://github.com/seungyeon-k/ScrewSplat-public'],
+  ]){
+    await page.getByLabel('Conference year',{exact:true}).selectOption(year);
+    await page.getByRole('textbox',{name:'Search papers'}).fill(title);
+    await expect(page.locator('.paper-card')).toHaveCount(1);
+    const code=page.locator('.paper-links').getByRole('link',{name:/^Code for/});
+    await expect(code).toHaveAttribute('href',url);
+    await expect(code).toHaveAttribute('target','_blank');
+    await page.getByRole('button',{name:'Stack view',exact:true}).click();
+    await expect(code).toHaveAttribute('href',url);
+    await page.locator('.paper-card h3 button').click();
+    await expect(page.locator('.paper-source-links').getByRole('link',{name:'Code',exact:true})).toHaveAttribute('href',url);
+    await page.getByRole('button',{name:'Back to papers',exact:true}).click();
+  }
+});
+
+test('missing optional code data does not prevent paper discovery',async({page})=>{
+  await page.route('**/data/paper-code-links.json',route=>route.fulfill({status:503}));
+  await page.reload();
+  await expect(page.locator('.paper-card')).toHaveCount(24);
+  await expect(page.locator('.paper-links a[aria-label^="Code"]')).toHaveCount(0);
 });
 
 test('task filters, empty search, reset, and historical editions',async({page})=>{

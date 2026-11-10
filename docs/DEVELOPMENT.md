@@ -28,7 +28,7 @@ Browser tests need Google Chrome. Matching tests need Python 3.11+.
 - `public/`: paper data, images, and fonts.
 - `scripts/`: data and documentation tools.
 - `tests/`: tests.
-- `docs/`: this guide, README GIF, and code-link data.
+- `docs/`: this guide and README assets.
 
 ## Update the README
 
@@ -64,6 +64,8 @@ Import code links from a downloaded metadata file:
 .venv/bin/python scripts/import-code-links.py --metadata /path/to/corl2026-data.json
 npm run docs:readme
 ```
+
+For 2025, use `--smallfry-readme /path/to/README.md` with [smallfry's list](https://github.com/smallfryy/corl-2025-papers). Verified code links live in `public/data/paper-code-links.json`, shared by the site and README.
 
 ## Credits and licenses
 

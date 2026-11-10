@@ -9,6 +9,26 @@ const enrichment = JSON.parse(fs.readFileSync(new URL('../public/data/enrichment
 const papers = catalog.papers.map(p => tagPaper({...p,...enrichment[p.id]}));
 const defaults = {year:'2026',query:'',topic:'',task:'',presentation:'',savedOnly:false,sort:'featured'};
 
+test('code links match indexed papers and retain source attribution',()=>{
+  const links=JSON.parse(fs.readFileSync(new URL('../public/data/paper-code-links.json',import.meta.url)));
+  const editions=[2025,2026].flatMap(year=>JSON.parse(fs.readFileSync(new URL(`../public/data/${year}.json`,import.meta.url))).papers);
+  const indexed=new Map(editions.map(p=>[p.id,p]));
+  for(const [id,row] of Object.entries(links)){
+    const paper=indexed.get(id);
+    assert.ok(paper,`Unknown paper ${id}`);
+    assert.equal(row.title,paper.title);
+    assert.equal(row.paperSource,paper.forumUrl);
+    assert.ok(row.source.startsWith('https://'));
+    assert.ok(row.code.length>0);
+    assert.equal(new Set(row.code.map(c=>c.url)).size,row.code.length);
+    for(const entry of row.code){
+      assert.match(entry.url,/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/);
+      assert.ok(Number.isFinite(Date.parse(entry.checkedAt)));
+    }
+  }
+  for(const year of [2025,2026])assert.ok(editions.some(p=>p.year===year&&links[p.id]));
+});
+
 test('2026 official program is complete, deduplicated, and links to matching OpenReview IDs', () => {
   assert.equal(papers.length, 687);
   assert.equal(new Set(papers.map(p=>p.id)).size, 687);

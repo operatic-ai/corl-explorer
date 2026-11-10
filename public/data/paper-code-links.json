@@ -1340,5 +1340,412 @@
         "checkedAt": "2026-11-09T20:44:21+00:00"
       }
     ]
+  },
+  "4XKKUifQ9c": {
+    "title": "ClutterDexGrasp: A Sim-to-Real System for General Dexterous Grasping in Cluttered Scenes",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=4XKKUifQ9c",
+    "code": [
+      {
+        "url": "https://github.com/QiyangYan/ClutterDexGrasp",
+        "checkedAt": "2026-11-10T17:42:32+00:00"
+      }
+    ]
+  },
+  "gD6YV5OuW3": {
+    "title": "ScrewSplat: An End-to-End Method for Articulated Object Recognition",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=gD6YV5OuW3",
+    "code": [
+      {
+        "url": "https://github.com/seungyeon-k/ScrewSplat-public",
+        "checkedAt": "2026-11-10T17:42:36+00:00"
+      }
+    ]
+  },
+  "C6VxzSpjrv": {
+    "title": "Visual Imitation Enables Contextual Humanoid Control",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=C6VxzSpjrv",
+    "code": [
+      {
+        "url": "https://github.com/hongsukchoi/VideoMimic",
+        "checkedAt": "2026-11-10T17:42:34+00:00"
+      }
+    ]
+  },
+  "UTPBM4dEUS": {
+    "title": "Sampling-based System Identification with Active Exploration for Legged Sim2Real Learning",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=UTPBM4dEUS",
+    "code": [
+      {
+        "url": "https://github.com/LeCAR-Lab/SPI-Active",
+        "checkedAt": "2026-11-10T17:42:31+00:00"
+      }
+    ]
+  },
+  "jU7AbGq3se": {
+    "title": "Steering Your Diffusion Policy with Latent Space Reinforcement Learning",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=jU7AbGq3se",
+    "code": [
+      {
+        "url": "https://github.com/nakamotoo/dsrl_pi0",
+        "checkedAt": "2026-11-10T17:42:35+00:00"
+      }
+    ]
+  },
+  "kto4zVmo4w": {
+    "title": "One View, Many Worlds: Single-Image to 3D object Meets Generative Domain Randomization for One-Shot 6D Pose Estimation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=kto4zVmo4w",
+    "code": [
+      {
+        "url": "https://github.com/GZWSAMA/OnePoseviaGen",
+        "checkedAt": "2026-11-10T17:42:30+00:00"
+      }
+    ]
+  },
+  "thVTNoJ4Lx": {
+    "title": "ObjectReact: Learning Object-Relative Control for Visual Navigation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=thVTNoJ4Lx",
+    "code": [
+      {
+        "url": "https://github.com/oravus/object-rel-nav",
+        "checkedAt": "2026-11-10T17:42:36+00:00"
+      }
+    ]
+  },
+  "QPTZfaxATs": {
+    "title": "RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=QPTZfaxATs",
+    "code": [
+      {
+        "url": "https://github.com/robomonkey-vla/RoboMonkey",
+        "checkedAt": "2026-11-10T17:42:36+00:00"
+      }
+    ]
+  },
+  "v2KevjWScT": {
+    "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=v2KevjWScT",
+    "code": [
+      {
+        "url": "https://github.com/behavior-robot-suite/brs-algo",
+        "checkedAt": "2026-11-10T17:42:34+00:00"
+      }
+    ]
+  },
+  "RFmezNsPWV": {
+    "title": "DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=RFmezNsPWV",
+    "code": [
+      {
+        "url": "https://github.com/juruobenruo/DexVLA",
+        "checkedAt": "2026-11-10T17:42:35+00:00"
+      }
+    ]
+  },
+  "LnryWopsfJ": {
+    "title": "Mobi-π: Mobilizing Your Robot Learning Policy",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=LnryWopsfJ",
+    "code": [
+      {
+        "url": "https://github.com/yjy0625/mobipi",
+        "checkedAt": "2026-11-10T17:42:37+00:00"
+      }
+    ]
+  },
+  "H0zFqW6QM0": {
+    "title": "AnyPlace: Learning Generalizable Object Placement for Robot Manipulation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=H0zFqW6QM0",
+    "code": [
+      {
+        "url": "https://github.com/ac-rad/anyplace",
+        "checkedAt": "2026-11-10T17:42:34+00:00"
+      }
+    ]
+  },
+  "isrcFrgwZp": {
+    "title": "AutoEval: Autonomous Evaluation of Generalist Robot Manipulation Policies in the Real World",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=isrcFrgwZp",
+    "code": [
+      {
+        "url": "https://github.com/zhouzypaul/auto_eval",
+        "checkedAt": "2026-11-10T17:42:40+00:00"
+      }
+    ]
+  },
+  "zEC8TOXDkH": {
+    "title": "GraspVLA: a Grasping Foundation Model Pre-trained on Billion-scale Synthetic Action Data",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=zEC8TOXDkH",
+    "code": [
+      {
+        "url": "https://github.com/PKU-EPIC/GraspVLA",
+        "checkedAt": "2026-11-10T17:42:31+00:00"
+      }
+    ]
+  },
+  "BTUioBmCWo": {
+    "title": "Phantom: Training Robots Without Robots Using Only Human Videos",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=BTUioBmCWo",
+    "code": [
+      {
+        "url": "https://github.com/MarionLepert/phantom",
+        "checkedAt": "2026-11-10T17:42:32+00:00"
+      }
+    ]
+  },
+  "RUSscFSEfD": {
+    "title": "FastUMI: A Scalable and Hardware-Independent Universal Manipulation Interface with Dataset",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=RUSscFSEfD",
+    "code": [
+      {
+        "url": "https://github.com/zxzm-zak/FastUMI_Data",
+        "checkedAt": "2026-11-10T17:42:38+00:00"
+      }
+    ]
+  },
+  "FdgtV9mO6j": {
+    "title": "Towards Generalizable Safety in Crowd Navigation via Conformal Uncertainty Handling",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=FdgtV9mO6j",
+    "code": [
+      {
+        "url": "https://github.com/tasl-lab/GenSafeNav",
+        "checkedAt": "2026-11-10T17:42:37+00:00"
+      }
+    ]
+  },
+  "iq0wUf6dUy": {
+    "title": "Reflective Planning: Vision-Language Models for Multi-Stage Long-Horizon Robotic Manipulation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=iq0wUf6dUy",
+    "code": [
+      {
+        "url": "https://github.com/yunhaif/reflect-vlm",
+        "checkedAt": "2026-11-10T17:42:37+00:00"
+      }
+    ]
+  },
+  "9FpccnRarn": {
+    "title": "BEVCalib: LiDAR-Camera Calibration via Geometry-Guided Bird’s-Eye View Representation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=9FpccnRarn",
+    "code": [
+      {
+        "url": "https://github.com/UCR-CISL/BEVCalib",
+        "checkedAt": "2026-11-10T17:42:32+00:00"
+      }
+    ]
+  },
+  "SpFH8T7gjM": {
+    "title": "SLAC: Simulation-Pretrained Latent Action Space for Whole-Body Real-World RL",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=SpFH8T7gjM",
+    "code": [
+      {
+        "url": "https://github.com/JiahengHu/SLAC",
+        "checkedAt": "2026-11-10T17:42:30+00:00"
+      }
+    ]
+  },
+  "HqqyJ9A2fy": {
+    "title": "Neural Robot Dynamics",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=HqqyJ9A2fy",
+    "code": [
+      {
+        "url": "https://github.com/NVlabs/neural-robot-dynamics",
+        "checkedAt": "2026-11-10T17:42:31+00:00"
+      }
+    ]
+  },
+  "kbrb6W7bUL": {
+    "title": "SDS – See it, Do it, Sorted: Quadruped Skill Synthesis from Single Video Demonstration",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=kbrb6W7bUL",
+    "code": [
+      {
+        "url": "https://github.com/RPL-CS-UCL/SDS",
+        "checkedAt": "2026-11-10T17:42:32+00:00"
+      }
+    ]
+  },
+  "GIHDBntBu9": {
+    "title": "TrackVLA: Embodied Visual Tracking in the Wild",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=GIHDBntBu9",
+    "code": [
+      {
+        "url": "https://github.com/wsakobe/TrackVLA",
+        "checkedAt": "2026-11-10T17:42:37+00:00"
+      }
+    ]
+  },
+  "EgSDP6AOF1": {
+    "title": "UniSkill: Imitating Human Videos via Cross-Embodiment Skill Representations",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=EgSDP6AOF1",
+    "code": [
+      {
+        "url": "https://github.com/KimHanjung/UniSkill",
+        "checkedAt": "2026-11-10T17:42:31+00:00"
+      }
+    ]
+  },
+  "CgGSFtjplI": {
+    "title": "Crossing the Human-Robot Embodiment Gap with Sim-to-Real RL using One Human Demonstration",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=CgGSFtjplI",
+    "code": [
+      {
+        "url": "https://github.com/tylerlum/human2sim2robot",
+        "checkedAt": "2026-11-10T17:42:37+00:00"
+      }
+    ]
+  },
+  "1NBdplgILy": {
+    "title": "Vision in Action: Learning Active Perception from Human Demonstrations",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=1NBdplgILy",
+    "code": [
+      {
+        "url": "https://github.com/haoyu-x/vision-in-action",
+        "checkedAt": "2026-11-10T17:42:34+00:00"
+      }
+    ]
+  },
+  "lRKGIidrYZ": {
+    "title": "Point Policy: Unifying Observations and Actions with Key Points for Robot Manipulation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=lRKGIidrYZ",
+    "code": [
+      {
+        "url": "https://github.com/siddhanthaldar/Point-Policy",
+        "checkedAt": "2026-11-10T17:42:36+00:00"
+      }
+    ]
+  },
+  "SNvUSjVm6C": {
+    "title": "Robust Dexterous Grasping of General Objects",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=SNvUSjVm6C",
+    "code": [
+      {
+        "url": "https://github.com/zdchan/RobustDexGrasp",
+        "checkedAt": "2026-11-10T17:42:38+00:00"
+      }
+    ]
+  },
+  "Tx54fkQ3Cq": {
+    "title": "Humanoid Policy Human Policy",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=Tx54fkQ3Cq",
+    "code": [
+      {
+        "url": "https://github.com/RogerQi/human-policy",
+        "checkedAt": "2026-11-10T17:42:32+00:00"
+      }
+    ]
+  },
+  "GH9kURIRlx": {
+    "title": "ToddlerBot: Open-Source ML-Compatible Humanoid Platform for Loco-Manipulation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=GH9kURIRlx",
+    "code": [
+      {
+        "url": "https://github.com/hshi74/toddlerbot",
+        "checkedAt": "2026-11-10T17:42:35+00:00"
+      }
+    ]
+  },
+  "htgNQHa6Ta": {
+    "title": "TWIST: Teleoperated Whole-Body Imitation System",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=htgNQHa6Ta",
+    "code": [
+      {
+        "url": "https://github.com/YanjieZe/TWIST",
+        "checkedAt": "2026-11-10T17:42:33+00:00"
+      }
+    ]
+  },
+  "AE299O0tph": {
+    "title": "See, Point, Fly: A Learning-Free VLM Framework for Universal Unmanned Aerial Navigation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=AE299O0tph",
+    "code": [
+      {
+        "url": "https://github.com/Hu-chih-yao/see-point-fly",
+        "checkedAt": "2026-11-10T17:42:31+00:00"
+      }
+    ]
+  },
+  "ZqBXnR6ppz": {
+    "title": "Generalist Robot Manipulation beyond Action Labeled Data",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=ZqBXnR6ppz",
+    "code": [
+      {
+        "url": "https://github.com/insait-institute/motovla",
+        "checkedAt": "2026-11-10T17:42:35+00:00"
+      }
+    ]
+  },
+  "EBcb4LemZZ": {
+    "title": "Co-Design of Soft Gripper with Neural Physics",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=EBcb4LemZZ",
+    "code": [
+      {
+        "url": "https://github.com/yswhynot/codesign-soft-gripper",
+        "checkedAt": "2026-11-10T17:42:37+00:00"
+      }
+    ]
+  },
+  "B6knAJsB9P": {
+    "title": "COLLAGE: Adaptive Fusion-based Retrieval for Augmented Policy Learning",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=B6knAJsB9P",
+    "code": [
+      {
+        "url": "https://github.com/SateeshKumar21/collage-retrieval-code",
+        "checkedAt": "2026-11-10T17:42:34+00:00"
+      }
+    ]
+  },
+  "SebHZk78aS": {
+    "title": "GraspMolmo: Generalizable Task-Oriented Grasping via Large-Scale Synthetic Data Generation",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=SebHZk78aS",
+    "code": [
+      {
+        "url": "https://github.com/abhaybd/GraspMolmo",
+        "checkedAt": "2026-11-10T17:42:33+00:00"
+      }
+    ]
+  },
+  "9uKL9FJBiz": {
+    "title": "Pseudo-Simulation for Autonomous Driving",
+    "source": "https://github.com/smallfryy/corl-2025-papers/blob/main/README.md",
+    "paperSource": "https://openreview.net/forum?id=9uKL9FJBiz",
+    "code": [
+      {
+        "url": "https://github.com/autonomousvision/navsim",
+        "checkedAt": "2026-11-10T17:42:33+00:00"
+      }
+    ]
   }
 }

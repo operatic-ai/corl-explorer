@@ -81,5 +81,5 @@
 @media(max-width:360px){.topbar{padding:0 8px;gap:4px}.page-nav{gap:8px}.brand strong{font-size:14px}}
 
 .brand{min-width:0}
-.brand-wordmark{display:block;width:220px;height:auto;max-width:100%;flex-shrink:1;min-width:0}
-@media(max-width:560px){.brand-wordmark{width:clamp(108px,32vw,155px)}}
+.brand-wordmark{display:block;width:205px;height:auto;max-width:100%;flex-shrink:1;min-width:0}
+@media(max-width:560px){.brand-wordmark{width:clamp(112px,34vw,160px)}}
